@@ -214,15 +214,15 @@ function App() {
 
           {/* Description Paragraph */}
           <p 
-            className="text-[17px] md:text-[19px] text-[#4A4235] tracking-wide leading-relaxed mb-16 md:mb-20 max-w-xl font-normal"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            className="text-[17px] md:text-[19px] text-[#4A4235] tracking-wide leading-relaxed max-w-xl font-normal"
+            style={{ fontFamily: "'Cormorant Garamond', serif", marginBottom: "80px" }}
           >
             A holistic approach to awaken your inner wisdom,<br />
             restore balance and create a fulfilling life.
           </p>
 
           {/* 4-Step Process Flow with Golden Badges & Connecting Arrows */}
-          <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 items-start justify-items-center mb-14 md:mb-18 relative">
+          <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 items-start justify-items-center relative" style={{ marginBottom: "72px" }}>
             
             {/* Step 1: AWAKEN */}
             <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
@@ -391,8 +391,8 @@ function App() {
 
           {/* Tagline Description */}
           <p 
-            className="text-[17px] md:text-[18.5px] text-[#5A5042] tracking-wide leading-relaxed mb-16 md:mb-24 max-w-xl font-normal"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            className="text-[17px] md:text-[18.5px] text-[#5A5042] tracking-wide leading-relaxed max-w-xl font-normal"
+            style={{ fontFamily: "'Cormorant Garamond', serif", marginBottom: "88px" }}
           >
             Personalized spiritual programs and ancient wisdom practices to help you heal, align, and transform your life.
           </p>
@@ -730,8 +730,8 @@ function App() {
 
                 {/* Description */}
                 <p 
-                  className="text-[16px] md:text-[17.5px] text-[#5A5042] tracking-wide leading-relaxed mb-12 md:mb-14 max-w-md font-normal"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                  className="text-[16px] md:text-[17.5px] text-[#5A5042] tracking-wide leading-relaxed max-w-md font-normal"
+                  style={{ fontFamily: "'Cormorant Garamond', serif", marginBottom: "56px" }}
                 >
                   A glimpse into the world of healing, wisdom and transformation that awaits you. Feel the energy. Sense the shift. Begin within.
                 </p>
