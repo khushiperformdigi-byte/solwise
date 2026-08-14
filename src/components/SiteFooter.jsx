@@ -244,7 +244,7 @@ export default function SiteFooter() {
               <span className="h-px flex-1 bg-[#C5A060]/70" />
             </div>
             <p
-              className="mb-5 max-w-[220px] text-[16px] leading-relaxed text-white/85 font-normal"
+              className="mb-8 sm:mb-9 max-w-[240px] text-[16.5px] leading-relaxed text-white/85 font-normal"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Guiding you to inner clarity, emotional balance and spiritual transformation.

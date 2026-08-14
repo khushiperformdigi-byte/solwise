@@ -391,7 +391,7 @@ function App() {
 
           {/* Tagline Description */}
           <p 
-            className="text-[17px] md:text-[18.5px] text-[#5A5042] tracking-wide leading-relaxed mb-12 md:mb-16 max-w-xl font-normal"
+            className="text-[17px] md:text-[18.5px] text-[#5A5042] tracking-wide leading-relaxed mb-16 md:mb-24 max-w-xl font-normal"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Personalized spiritual programs and ancient wisdom practices to help you heal, align, and transform your life.
@@ -730,7 +730,7 @@ function App() {
 
                 {/* Description */}
                 <p 
-                  className="text-[16px] md:text-[17.5px] text-[#5A5042] tracking-wide leading-relaxed mb-5 max-w-md font-normal"
+                  className="text-[16px] md:text-[17.5px] text-[#5A5042] tracking-wide leading-relaxed mb-8 md:mb-10 max-w-md font-normal"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   A glimpse into the world of healing, wisdom and transformation that awaits you. Feel the energy. Sense the shift. Begin within.
