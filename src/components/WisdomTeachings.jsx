@@ -114,7 +114,7 @@ function ArticleCard({ article }) {
         </div>
 
         <p
-          className="mb-5 flex-1 text-[16px] leading-relaxed font-normal text-[#5C5348]"
+          className="mb-5 flex-1 text-[17.5px] md:text-[18.5px] leading-relaxed font-normal text-[#4A4235]"
           style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
           {article.description}

@@ -150,7 +150,7 @@ function EventCard({ event }) {
               {event.title}
             </h3>
             <p
-              className="text-[14px] leading-relaxed font-normal text-[#5C5348]"
+              className="text-[16.5px] md:text-[17.5px] leading-relaxed font-normal text-[#4A4235]"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               {event.description}
@@ -219,7 +219,7 @@ export default function WorkshopsRetreats() {
           <Sparkle className="mb-2 h-3 w-3 text-[#C4A15A]" />
 
           <p
-            className="max-w-xl text-[16.5px] leading-relaxed font-normal text-[#5C5348] sm:text-[18px]"
+            className="max-w-xl text-[18.5px] leading-relaxed font-normal text-[#4A4235] sm:text-[20px] md:text-[21px]"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Join transformative experiences designed to help you heal, grow and connect with your inner self.

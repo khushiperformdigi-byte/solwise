@@ -756,58 +756,58 @@ function App() {
             <div className="w-full border-t border-[#E3D5C1]/40 pt-6 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 justify-items-center">
               
               {/* Feature 1 */}
-              <div className="flex flex-col items-center text-center max-w-[180px]">
+              <div className="flex flex-col items-center text-center max-w-[200px]">
                 <svg viewBox="0 0 24 24" className="h-6 w-6 text-[#B88A2E] mb-2" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M12 4C10 8 6 10 7 14C8 14 10 12 12 8C14 12 16 14 17 14C18 10 14 8 12 4Z" fill="#B88A2E" opacity="0.2" />
                   <path d="M12 4C10 8 6 10 7 14C8 14 10 12 12 8C14 12 16 14 17 14C18 10 14 8 12 4Z" />
                   <path d="M12 8C7 12 3 14 4 18C6 18 9 16 12 12C15 16 18 18 20 18C21 14 17 12 12 8Z" />
                 </svg>
-                <h4 className="engrave-green text-[12.5px] font-semibold uppercase tracking-wide mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                <h4 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold uppercase tracking-wide mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   Soulful Visuals
                 </h4>
-                <p className="text-[13.5px] text-[#5A5042] leading-tight font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-[16px] md:text-[17.5px] text-[#5A5042] leading-snug font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Cinematic moments that touch your heart.
                 </p>
               </div>
 
               {/* Feature 2 */}
-              <div className="flex flex-col items-center text-center max-w-[180px]">
+              <div className="flex flex-col items-center text-center max-w-[200px]">
                 <svg viewBox="0 0 24 24" className="h-6 w-6 text-[#B88A2E] mb-2" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <circle cx="12" cy="12" r="10" />
                   <polygon points="10 8 16 12 10 16 10 8" fill="#B88A2E" opacity="0.2" />
                   <polygon points="10 8 16 12 10 16 10 8" />
                 </svg>
-                <h4 className="engrave-green text-[12.5px] font-semibold uppercase tracking-wide mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                <h4 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold uppercase tracking-wide mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   Real Journeys
                 </h4>
-                <p className="text-[13.5px] text-[#5A5042] leading-tight font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-[16px] md:text-[17.5px] text-[#5A5042] leading-snug font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Stories of transformation and inner healing.
                 </p>
               </div>
 
               {/* Feature 3 */}
-              <div className="flex flex-col items-center text-center max-w-[180px]">
+              <div className="flex flex-col items-center text-center max-w-[200px]">
                 <svg viewBox="0 0 24 24" className="h-6 w-6 text-[#B88A2E] mb-2" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M12 3v18M3 12h18M12 3l3 4.5M12 21l-3-4.5M3 12l4.5-3M21 12l-4.5 3" />
                   <path d="M12 12m-2 0a2 2 0 1 0 4 0 2 2 0 1 0 -4 0" fill="#B88A2E" opacity="0.2" />
                 </svg>
-                <h4 className="engrave-green text-[12.5px] font-semibold uppercase tracking-wide mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                <h4 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold uppercase tracking-wide mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   Deep Connection
                 </h4>
-                <p className="text-[13.5px] text-[#5A5042] leading-tight font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-[16px] md:text-[17.5px] text-[#5A5042] leading-snug font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Feel the energy of a higher vibration.
                 </p>
               </div>
 
               {/* Feature 4 */}
-              <div className="flex flex-col items-center text-center max-w-[180px]">
+              <div className="flex flex-col items-center text-center max-w-[200px]">
                 <svg viewBox="0 0 24 24" className="h-6 w-6 text-[#B88A2E] mb-2" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M12 2a10 10 0 1 0 10 10c0-2-1.5-3.5-3-3.5A2.5 2.5 0 0 0 16.5 11c0 3-2.5 5.5-5.5 5.5S5.5 14 5.5 11 8 5.5 11 5.5c2 0 3.5 1.5 3.5 3" />
                 </svg>
-                <h4 className="engrave-green text-[12.5px] font-semibold uppercase tracking-wide mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                <h4 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold uppercase tracking-wide mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   Awaken Within
                 </h4>
-                <p className="text-[13.5px] text-[#5A5042] leading-tight font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-[16px] md:text-[17.5px] text-[#5A5042] leading-snug font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Rediscover your truth and life's purpose.
                 </p>
               </div>

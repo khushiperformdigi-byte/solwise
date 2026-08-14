@@ -112,7 +112,7 @@ function StoryCard({ story }) {
             “
           </span>
           <p
-            className="-mt-3 text-[16px] leading-relaxed font-normal text-[#3A342C] sm:text-[17.5px]"
+            className="-mt-3 text-[17.5px] leading-relaxed font-normal text-[#3A342C] sm:text-[19px]"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             {story.quote}
@@ -207,7 +207,7 @@ export default function RealTransformations() {
           </h2>
 
           <p
-            className="max-w-xl text-[16px] leading-relaxed font-normal text-[#5C5348] sm:text-[17.5px]"
+            className="max-w-xl text-[18.5px] leading-relaxed font-normal text-[#4A4235] sm:text-[20px] md:text-[21px]"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Lives transformed through guidance, healing and inner awakening.
