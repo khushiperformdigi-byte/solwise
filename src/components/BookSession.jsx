@@ -229,8 +229,8 @@ export default function BookSession() {
       <div id="contact" className="h-0 scroll-mt-28" />
       <section
         id="book"
-        className="relative overflow-hidden border-b border-[#D9C79E]/30 py-8 sm:py-10"
-        style={{ backgroundColor: "#F9F8F4" }}
+        className="relative overflow-hidden border-b border-[#D9C79E]/30 py-8 sm:py-10 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url('/ChatGPT Image Aug 14, 2026, 12_05_33 PM.png')` }}
       >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,252,246,0.9)_0%,_transparent_70%)]" />
 
