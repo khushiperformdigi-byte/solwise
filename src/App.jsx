@@ -226,13 +226,11 @@ function App() {
             
             {/* Step 1: AWAKEN */}
             <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
-              <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] group-hover:from-[#123A1A] group-hover:to-[#0d2a13] border border-[#E0D0B5] group-hover:border-[#C4A15A]/45 shadow-md flex items-center justify-center mb-3 group-hover:scale-105 transition-all duration-300 text-[#B88A2E] group-hover:text-[#C4A15A]">
-                <svg viewBox="0 0 24 24" className="h-8 w-8 transition-colors duration-300" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M12 4C10 8 6 10 7 14C8 14 10 12 12 8C14 12 16 14 17 14C18 10 14 8 12 4Z" fill="currentColor" opacity="0.25" />
-                  <path d="M12 4C10 8 6 10 7 14C8 14 10 12 12 8C14 12 16 14 17 14C18 10 14 8 12 4Z" />
-                  <path d="M12 8C7 12 3 14 4 18C6 18 9 16 12 12C15 16 18 18 20 18C21 14 17 12 12 8Z" />
-                </svg>
-              </div>
+              <img
+                src="/icon_awaken.png"
+                alt="Awaken"
+                className="h-20 w-20 rounded-full object-cover mb-3 shadow-md group-hover:scale-105 transition-transform duration-300 border border-[#E0D0B5]"
+              />
               <h3 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold tracking-[0.2em] uppercase mb-1.5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 AWAKEN
               </h3>
@@ -251,15 +249,11 @@ function App() {
 
             {/* Step 2: ALIGN */}
             <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
-              <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] group-hover:from-[#123A1A] group-hover:to-[#0d2a13] border border-[#E0D0B5] group-hover:border-[#C4A15A]/45 shadow-md flex items-center justify-center mb-3 group-hover:scale-105 transition-all duration-300 text-[#B88A2E] group-hover:text-[#C4A15A]">
-                <svg viewBox="0 0 24 24" className="h-7 w-7 transition-colors duration-300" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <ellipse cx="12" cy="18" rx="7" ry="2.5" fill="currentColor" opacity="0.2" />
-                  <ellipse cx="12" cy="18" rx="7" ry="2.5" />
-                  <ellipse cx="12" cy="13" rx="5" ry="2" />
-                  <ellipse cx="12" cy="9" rx="3.5" ry="1.5" />
-                  <ellipse cx="12" cy="5.5" rx="2" ry="1" />
-                </svg>
-              </div>
+              <img
+                src="/icon_align.png"
+                alt="Align"
+                className="h-20 w-20 rounded-full object-cover mb-3 shadow-md group-hover:scale-105 transition-transform duration-300 border border-[#E0D0B5]"
+              />
               <h3 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold tracking-[0.2em] uppercase mb-1.5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 ALIGN
               </h3>
@@ -278,12 +272,11 @@ function App() {
 
             {/* Step 3: HEAL */}
             <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
-              <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] group-hover:from-[#123A1A] group-hover:to-[#0d2a13] border border-[#E0D0B5] group-hover:border-[#C4A15A]/45 shadow-md flex items-center justify-center mb-3 group-hover:scale-105 transition-all duration-300 text-[#B88A2E] group-hover:text-[#C4A15A]">
-                <svg viewBox="0 0 24 24" className="h-7 w-7 transition-colors duration-300" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor" opacity="0.2" />
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                </svg>
-              </div>
+              <img
+                src="/icon_heal.png"
+                alt="Heal"
+                className="h-20 w-20 rounded-full object-cover mb-3 shadow-md group-hover:scale-105 transition-transform duration-300 border border-[#E0D0B5]"
+              />
               <h3 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold tracking-[0.2em] uppercase mb-1.5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 HEAL
               </h3>
@@ -302,13 +295,11 @@ function App() {
 
             {/* Step 4: TRANSFORM */}
             <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
-              <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] group-hover:from-[#123A1A] group-hover:to-[#0d2a13] border border-[#E0D0B5] group-hover:border-[#C4A15A]/45 shadow-md flex items-center justify-center mb-3 group-hover:scale-105 transition-all duration-300 text-[#B88A2E] group-hover:text-[#C4A15A]">
-                <svg viewBox="0 0 24 24" className="h-7 w-7 transition-colors duration-300" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <circle cx="12" cy="7" r="3" fill="currentColor" opacity="0.3" />
-                  <circle cx="12" cy="7" r="3" />
-                  <path d="M12 10v7M8 21h8M9 13l3 2 3-2" />
-                </svg>
-              </div>
+              <img
+                src="/icon_transform.png"
+                alt="Transform"
+                className="h-20 w-20 rounded-full object-cover mb-3 shadow-md group-hover:scale-105 transition-transform duration-300 border border-[#E0D0B5]"
+              />
               <h3 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold tracking-[0.2em] uppercase mb-1.5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 TRANSFORM
               </h3>
