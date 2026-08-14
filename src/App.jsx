@@ -227,9 +227,9 @@ function App() {
             {/* Step 1: AWAKEN */}
             <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
               <img
-                src="/2ddb08d7-1b30-4fca-9a87-be1105f2bdf3.png"
+                src="/process_icon_1.png"
                 alt="Awaken"
-                className="h-28 w-28 object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+                className="h-20 w-20 rounded-full object-cover mb-3 shadow-md group-hover:scale-105 transition-transform duration-300"
               />
               <h3 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold tracking-[0.2em] uppercase mb-1.5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 AWAKEN
@@ -240,7 +240,7 @@ function App() {
             </div>
 
             {/* Connecting Arrow 1 (Desktop) */}
-            <div className="hidden md:flex items-center justify-center absolute left-[22%] top-11 -translate-x-1/2">
+            <div className="hidden md:flex items-center justify-center absolute left-[22%] top-7 -translate-x-1/2">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-[#C49A45]/80" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="4" y1="12" x2="20" y2="12" />
                 <polyline points="14 6 20 12 14 18" />
@@ -250,9 +250,9 @@ function App() {
             {/* Step 2: ALIGN */}
             <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
               <img
-                src="/43651c84-0dd7-4710-a30a-1590ba6a3907.png"
+                src="/process_icon_2.png"
                 alt="Align"
-                className="h-28 w-28 object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+                className="h-20 w-20 rounded-full object-cover mb-3 shadow-md group-hover:scale-105 transition-transform duration-300"
               />
               <h3 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold tracking-[0.2em] uppercase mb-1.5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 ALIGN
@@ -263,7 +263,7 @@ function App() {
             </div>
 
             {/* Connecting Arrow 2 (Desktop) */}
-            <div className="hidden md:flex items-center justify-center absolute left-[47%] top-11 -translate-x-1/2">
+            <div className="hidden md:flex items-center justify-center absolute left-[47%] top-7 -translate-x-1/2">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-[#C49A45]/80" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="4" y1="12" x2="20" y2="12" />
                 <polyline points="14 6 20 12 14 18" />
@@ -273,9 +273,9 @@ function App() {
             {/* Step 3: HEAL */}
             <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
               <img
-                src="/2eb0dd0d-14a3-40eb-ad3f-02c4cf6b10c6.png"
+                src="/process_icon_3.png"
                 alt="Heal"
-                className="h-28 w-28 object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+                className="h-20 w-20 rounded-full object-cover mb-3 shadow-md group-hover:scale-105 transition-transform duration-300"
               />
               <h3 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold tracking-[0.2em] uppercase mb-1.5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 HEAL
@@ -286,7 +286,7 @@ function App() {
             </div>
 
             {/* Connecting Arrow 3 (Desktop) */}
-            <div className="hidden md:flex items-center justify-center absolute left-[72%] top-11 -translate-x-1/2">
+            <div className="hidden md:flex items-center justify-center absolute left-[72%] top-7 -translate-x-1/2">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-[#C49A45]/80" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="4" y1="12" x2="20" y2="12" />
                 <polyline points="14 6 20 12 14 18" />
@@ -296,9 +296,9 @@ function App() {
             {/* Step 4: TRANSFORM */}
             <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
               <img
-                src="/8683f3d9-8964-4689-8844-71b049ff819c.png"
+                src="/process_icon_4.png"
                 alt="Transform"
-                className="h-28 w-28 object-contain mb-3 drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+                className="h-20 w-20 rounded-full object-cover mb-3 shadow-md group-hover:scale-105 transition-transform duration-300"
               />
               <h3 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold tracking-[0.2em] uppercase mb-1.5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 TRANSFORM
