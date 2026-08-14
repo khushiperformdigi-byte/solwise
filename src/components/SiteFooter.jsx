@@ -187,13 +187,13 @@ export default function SiteFooter() {
               </span>
               <div>
                 <h3
-                  className="engrave-ink text-[20px] leading-tight sm:text-[22px] font-semibold"
+                  className="engrave-ink text-[22px] leading-tight sm:text-[25px] font-semibold"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   Ready to begin?
                 </h3>
                 <p
-                  className="mt-1 text-[14.5px] text-[#5C5348] sm:text-[15.5px] font-normal"
+                  className="mt-1 text-[17px] text-[#4A4235] sm:text-[18.5px] font-normal leading-relaxed"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   Book a personalized session and take the first step.

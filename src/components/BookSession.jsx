@@ -183,7 +183,7 @@ function Field({ label, icon, children }) {
   return (
     <label className="block">
       <span
-        className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#3A342C]"
+        className="mb-1.5 block text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.14em] text-[#2C261E]"
         style={{ fontFamily: "'Montserrat', sans-serif" }}
       >
         {label}
@@ -191,8 +191,8 @@ function Field({ label, icon, children }) {
       <span className="relative block">
         {children}
         {icon && (
-          <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-[#B08A3A]">
-            <Icon type={icon} className="h-4 w-4" />
+          <span className="pointer-events-none absolute top-1/2 right-3.5 -translate-y-1/2 text-[#B08A3A]">
+            <Icon type={icon} className="h-4.5 w-4.5" />
           </span>
         )}
       </span>
@@ -201,7 +201,7 @@ function Field({ label, icon, children }) {
 }
 
 const inputClass =
-  "w-full rounded-lg border border-[#E2D6C2] bg-[#FFFcf8] px-3.5 py-2 pr-10 text-[15px] text-[#2C261E] outline-none transition-colors placeholder:text-[#A39888] focus:border-[#C4A15A] focus:ring-2 focus:ring-[#C4A15A]/20";
+  "w-full rounded-lg border border-[#E2D6C2] bg-[#FFFcf8] px-4 py-2.5 pr-10 text-[16.5px] sm:text-[17.5px] text-[#2C261E] outline-none transition-colors placeholder:text-[#A39888] focus:border-[#C4A15A] focus:ring-2 focus:ring-[#C4A15A]/20";
 
 export default function BookSession() {
   const [form, setForm] = useState({
@@ -263,7 +263,7 @@ export default function BookSession() {
               Share a few details and I’ll create a space for healing, clarity and inner alignment — at a time that works for you.
             </p>
 
-            <ul className="space-y-7 md:space-y-8">
+            <ul className="space-y-9 md:space-y-10">
               {features.map((item) => (
                 <li key={item.title} className="flex gap-4 items-start">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F3EAD8] text-[#C4A15A] shadow-sm">
