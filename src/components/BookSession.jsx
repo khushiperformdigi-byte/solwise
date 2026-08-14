@@ -235,12 +235,12 @@ export default function BookSession() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,252,246,0.9)_0%,_transparent_70%)]" />
 
         <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-start gap-10 px-5 sm:px-8 lg:grid-cols-12 lg:gap-12">
-          {/* Left column */}
-          <div className="relative lg:col-span-5 lg:pt-2">
-            <div className="mb-2 flex items-center justify-center gap-3 w-full">
+          {/* Left column shifted downside with increased text sizes */}
+          <div className="relative lg:col-span-5 lg:pt-14">
+            <div className="mb-3 flex items-center justify-start gap-3 w-full">
               <span className="h-px w-10 bg-[#C4A15A]/70 sm:w-14" />
               <span
-                className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[12px]"
+                className="text-[12px] font-semibold uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[13px]"
                 style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 Book Your Session
@@ -248,7 +248,7 @@ export default function BookSession() {
               <span className="h-px w-10 bg-[#C4A15A]/70 sm:w-14" />
             </div>
             <h2
-              className="mb-3 text-[34px] leading-[1.12] font-normal sm:text-[42px] md:text-[46px]"
+              className="mb-4 text-[38px] leading-[1.1] font-normal sm:text-[46px] md:text-[50px] lg:text-[52px]"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               <span className="engrave-green">Your Journey to </span>
@@ -257,32 +257,32 @@ export default function BookSession() {
               <span className="engrave-green">Begins Here</span>
             </h2>
             <p
-              className="mb-9 max-w-md text-[16.5px] leading-relaxed font-normal text-[#5C5348] sm:text-[18px]"
+              className="mb-10 md:mb-12 max-w-md text-[18.5px] leading-relaxed font-normal text-[#5C5348] sm:text-[20px] md:text-[21px]"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Share a few details and I’ll create a space for healing, clarity and inner alignment — at a time that works for you.
             </p>
 
-            <ul className="space-y-3.5">
+            <ul className="space-y-7 md:space-y-8">
               {features.map((item) => (
-                <li key={item.title} className="flex gap-3.5">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#F3EAD8] text-[#C4A15A]">
-                    <Icon type={item.icon} className={item.icon === "sparkle" ? "h-4 w-4" : "h-5 w-5"} />
+                <li key={item.title} className="flex gap-4 items-start">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F3EAD8] text-[#C4A15A] shadow-sm mt-0.5">
+                    <Icon type={item.icon} className={item.icon === "sparkle" ? "h-5 w-5" : "h-5.5 w-5.5"} />
                   </span>
-                  <span>
+                  <div>
                     <span
-                      className="engrave-green block text-[17px] font-semibold"
+                      className="engrave-green block text-[20px] md:text-[21px] font-semibold mb-1"
                       style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       {item.title}
                     </span>
                     <span
-                      className="mt-0.5 block text-[14.5px] leading-relaxed text-[#5C5348] font-normal"
+                      className="block text-[16.5px] md:text-[17.5px] leading-relaxed text-[#5C5348] font-normal"
                       style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       {item.text}
                     </span>
-                  </span>
+                  </div>
                 </li>
               ))}
             </ul>
