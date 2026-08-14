@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-lora: "Lora", serif;
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-lato: "Lato", sans-serif;
+  --font-pinyon: "Pinyon Script", cursive;
+}
+
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.25s ease-out forwards;
+}
+
+/* Engraved / letterpress headings */
+h1,
+h2,
+h3,
+h4,
+.engrave {
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.58),
+    0 -1px 1px rgba(18, 40, 28, 0.28),
+    0 2px 8px rgba(18, 40, 28, 0.08);
+}
+
+.engrave-light {
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.28),
+    0 -1px 1px rgba(0, 0, 0, 0.45),
+    0 10px 22px rgba(0, 0, 0, 0.28) !important;
+}
+
+.engrave-green,
+.engrave-gold,
+.engrave-ink {
+  display: inline-block;
+  max-width: 100%;
+  text-shadow: none !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+}
+
+h2.engrave-green,
+h3.engrave-green,
+h4.engrave-green,
+h2.engrave-gold,
+h3.engrave-gold {
+  display: block;
+}
+
+.engrave-green {
+  background-image: linear-gradient(
+    185deg,
+    #4a7a5c 0%,
+    #2d5540 22%,
+    #1a3a28 48%,
+    #0f2418 78%,
+    #244a36 100%
+  );
+  filter:
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.42))
+    drop-shadow(0 -1px 0 rgba(8, 24, 16, 0.38));
+}
+
+.engrave-gold {
+  background-image: linear-gradient(
+    185deg,
+    #f3e2b0 0%,
+    #e0c07a 18%,
+    #c4a15a 42%,
+    #8c6621 74%,
+    #b8953f 100%
+  );
+  filter:
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.4))
+    drop-shadow(0 -1px 0 rgba(90, 55, 12, 0.38));
+}
+
+.engrave-ink {
+  background-image: linear-gradient(
+    185deg,
+    #5a5248 0%,
+    #3a342c 40%,
+    #2c261e 72%,
+    #1a1612 100%
+  );
+  filter:
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.4))
+    drop-shadow(0 -1px 0 rgba(20, 16, 12, 0.35));
+}
+
+/* Engraved gold on dark backgrounds (footer) */
+.engrave-gold-dark {
+  display: inline-block;
+  max-width: 100%;
+  background-image: linear-gradient(
+    185deg,
+    #f0dfb0 0%,
+    #d4b36a 28%,
+    #c5a060 52%,
+    #8a6620 82%,
+    #c4a15a 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none !important;
+  filter:
+    drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.55))
+    drop-shadow(0 1px 0 rgba(255, 230, 170, 0.22));
+}
