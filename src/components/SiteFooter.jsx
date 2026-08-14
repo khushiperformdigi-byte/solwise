@@ -79,8 +79,8 @@ function ColumnTitle({ children }) {
 
 function FooterLink({ href, children }) {
   const { openBooking } = useBookingModal();
-  const className = "block text-[13px] text-[#F4EFE6]/90 transition-colors hover:text-[#C5A060] font-medium";
-  const style = { fontFamily: "'Montserrat', sans-serif" };
+  const className = "block text-[16px] text-[#F4EFE6]/85 transition-colors hover:text-[#C5A060] font-normal";
+  const style = { fontFamily: "'Cormorant Garamond', serif" };
 
   if (href === "#book" || href === "/#book" || href === "/#contact") {
     return (
@@ -244,7 +244,7 @@ export default function SiteFooter() {
               <span className="h-px flex-1 bg-[#C5A060]/70" />
             </div>
             <p
-              className="mb-5 max-w-[220px] text-[14.5px] leading-relaxed text-white/80 font-normal"
+              className="mb-5 max-w-[220px] text-[16px] leading-relaxed text-white/85 font-normal"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Guiding you to inner clarity, emotional balance and spiritual transformation.
@@ -259,7 +259,7 @@ export default function SiteFooter() {
 
           <div className="lg:col-span-2 lg:border-l lg:border-[#C5A060]/25 lg:px-7">
             <ColumnTitle>Explore</ColumnTitle>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {exploreLinks.map((link) => (
                 <li key={link.label}>
                   <FooterLink href={link.href}>{link.label}</FooterLink>
@@ -270,7 +270,7 @@ export default function SiteFooter() {
 
           <div className="lg:col-span-2 lg:border-l lg:border-[#C5A060]/25 lg:px-7">
             <ColumnTitle>Services</ColumnTitle>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {serviceLinks.map((link) => (
                 <li key={link.label}>
                   <FooterLink href={link.href}>{link.label}</FooterLink>
@@ -281,7 +281,7 @@ export default function SiteFooter() {
 
           <div className="lg:col-span-2 lg:border-l lg:border-[#C5A060]/25 lg:px-7">
             <ColumnTitle>Resources</ColumnTitle>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {resourceLinks.map((link) => (
                 <li key={link.label}>
                   <FooterLink href={link.href}>{link.label}</FooterLink>
@@ -293,7 +293,7 @@ export default function SiteFooter() {
           <div className="lg:col-span-3 lg:border-l lg:border-[#C5A060]/25 lg:pl-7">
             <ColumnTitle>Stay Connected</ColumnTitle>
             <p
-              className="mb-4 text-[14.5px] leading-relaxed text-white/80 font-normal"
+              className="mb-4 text-[16.5px] leading-relaxed text-white/85 font-normal"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Get wisdom, updates and invitations to our events.
@@ -301,7 +301,7 @@ export default function SiteFooter() {
 
             {subscribed ? (
               <p
-                className="text-[14.5px] text-[#C5A060] font-normal"
+                className="text-[16.5px] text-[#C5A060] font-normal"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 Thank you — you&apos;re on the list.
@@ -316,7 +316,7 @@ export default function SiteFooter() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Your email address"
-                    className="w-full rounded-md border border-white/25 bg-transparent px-3 py-2.5 pr-10 text-[14px] text-white outline-none placeholder:text-white/45 focus:border-[#C5A060]"
+                    className="w-full rounded-md border border-white/25 bg-transparent px-3.5 py-2.5 pr-10 text-[16px] text-white outline-none placeholder:text-white/45 focus:border-[#C5A060]"
                     style={{ fontFamily: "'Cormorant Garamond', serif" }}
                   />
                   <svg viewBox="0 0 24 24" aria-hidden className="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-white/50" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -334,8 +334,8 @@ export default function SiteFooter() {
               </form>
             )}
             <p
-              className="mt-3 text-[11px] leading-relaxed text-white/50"
-              style={{ fontFamily: "'Montserrat', sans-serif" }}
+              className="mt-3 text-[14.5px] leading-relaxed text-white/60 font-normal"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               We respect your privacy. Unsubscribe at any time.
             </p>
@@ -346,8 +346,8 @@ export default function SiteFooter() {
         <div className="relative z-10 border-t border-white/10">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 py-5 text-center sm:px-8 md:flex-row md:justify-between md:text-left">
             <p
-              className="text-[12px] text-white/55 font-medium"
-              style={{ fontFamily: "'Montserrat', sans-serif" }}
+              className="text-[15px] text-white/70 font-normal"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               © 2025 The Mystic Guru. All Rights Reserved.
             </p>
@@ -361,8 +361,8 @@ export default function SiteFooter() {
             </div>
 
             <p
-              className="text-[12px] text-white/55 font-medium"
-              style={{ fontFamily: "'Montserrat', sans-serif" }}
+              className="text-[15px] text-white/70 font-normal"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               <a href="#privacy" className="transition-colors hover:text-[#C5A060]">Privacy Policy</a>
               <span className="mx-1.5 text-white/30">|</span>
