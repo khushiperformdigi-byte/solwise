@@ -396,7 +396,7 @@ function App() {
               
               {/* Card 1 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <img src="/prog_icon_1.png" alt="Life Coaching" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
+                <img src="/prog_icon_1.png" alt="Life Coaching" className="h-24 w-24 rounded-full object-contain mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300 bg-white" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Life Coaching<br />& Guidance
                 </h3>
@@ -412,7 +412,7 @@ function App() {
 
               {/* Card 2 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <img src="/prog_icon_2.png" alt="Crystal Guidance" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
+                <img src="/prog_icon_2.png" alt="Crystal Guidance" className="h-24 w-24 rounded-full object-contain mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300 bg-white" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Crystal Guidance<br />& Energy Healing
                 </h3>
@@ -428,7 +428,7 @@ function App() {
 
               {/* Card 3 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <img src="/prog_icon_3.png" alt="Aura Reading" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
+                <img src="/prog_icon_3.png" alt="Aura Reading" className="h-24 w-24 rounded-full object-contain mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300 bg-white" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Aura Reading<br />& Analysis
                 </h3>
@@ -444,7 +444,7 @@ function App() {
 
               {/* Card 4 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <img src="/prog_icon_4.png" alt="Astro Numerology" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
+                <img src="/prog_icon_4.png" alt="Astro Numerology" className="h-24 w-24 rounded-full object-contain mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300 bg-white" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Astro Numerology<br />Consultation
                 </h3>
@@ -465,7 +465,7 @@ function App() {
               
               {/* Card 5 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <img src="/prog_icon_5.png" alt="Vaastu Consultation" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
+                <img src="/prog_icon_5.png" alt="Vaastu Consultation" className="h-24 w-24 rounded-full object-contain mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300 bg-white" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Vaastu Consultation<br />& Corrections
                 </h3>
@@ -481,7 +481,7 @@ function App() {
 
               {/* Card 6 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <img src="/prog_icon_6.png" alt="Meditations" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
+                <img src="/prog_icon_6.png" alt="Meditations" className="h-24 w-24 rounded-full object-contain mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300 bg-white" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Meditations
                 </h3>
@@ -497,7 +497,7 @@ function App() {
 
               {/* Card 7 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <img src="/prog_icon_7.png" alt="Aura Reset" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
+                <img src="/prog_icon_7.png" alt="Aura Reset" className="h-24 w-24 rounded-full object-contain mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300 bg-white" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Aura Reset<br />Self-Healing Workshops
                 </h3>
