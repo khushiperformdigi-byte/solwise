@@ -112,8 +112,8 @@ function StoryCard({ story }) {
             “
           </span>
           <p
-            className="-mt-3 text-[14.5px] leading-relaxed font-light text-[#3A342C] sm:text-[15px]"
-            style={{ fontFamily: "'Lora', serif" }}
+            className="-mt-3 text-[17.5px] leading-relaxed font-normal text-[#3A342C] sm:text-[19px]"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             {story.quote}
           </p>
@@ -128,14 +128,14 @@ function StoryCard({ story }) {
         </div>
 
         <h3
-          className="engrave-gold text-[15px] font-semibold uppercase tracking-[0.16em] sm:text-[16px]"
+          className="engrave-gold text-[16px] font-semibold uppercase tracking-[0.16em] sm:text-[17px]"
           style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
           {story.name}
         </h3>
         <p
-          className="mt-1 text-[10px] font-medium uppercase tracking-[0.18em] text-[#3A342C] sm:text-[11px]"
-          style={{ fontFamily: "'Lato', sans-serif" }}
+          className="mt-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#3A342C] sm:text-[11px]"
+          style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
           {story.location}
         </p>
@@ -190,8 +190,8 @@ export default function RealTransformations() {
           <div className="mb-2 flex items-center justify-center gap-3">
             <span className="h-px w-10 bg-[#C4A15A]/70 sm:w-14" />
             <span
-              className="text-[11px] font-medium uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[12px]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[12px]"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               Real Transformations
             </span>
@@ -203,12 +203,12 @@ export default function RealTransformations() {
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             <span className="engrave-ink">Real Stories.</span>{" "}
-            <span className="engrave-gold">Real Transformations.</span>
+            <span className="engrave-gold font-medium">Real Transformations.</span>
           </h2>
 
           <p
-            className="max-w-xl text-[13.5px] leading-relaxed font-light text-[#5C5348] sm:text-[14.5px]"
-            style={{ fontFamily: "'Lora', serif" }}
+            className="max-w-xl text-[18.5px] leading-relaxed font-normal text-[#4A4235] sm:text-[20px] md:text-[21px]"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Lives transformed through guidance, healing and inner awakening.
           </p>
@@ -229,7 +229,7 @@ export default function RealTransformations() {
           <a
             href="#stories"
             className="inline-flex items-center gap-2.5 rounded-full bg-[#123A1A] hover:bg-[#0d2a13] text-[#C4A15A] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] shadow-md border border-[#C4A15A]/70 transition-all duration-300 hover:scale-[1.03] sm:px-8 sm:py-3.5 sm:text-[12px]"
-            style={{ fontFamily: "'Lato', sans-serif" }}
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             Read More Stories
             <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 text-[#C4A15A]" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">

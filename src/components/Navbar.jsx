@@ -15,7 +15,7 @@ const links = [
 function NavLink({ item, onClick, className = "" }) {
   const { openBooking } = useBookingModal();
   const base =
-    "text-[12px] font-medium uppercase tracking-[0.16em] text-[#3A342C] transition-colors hover:text-[#1A3A28] " +
+    "text-[12px] font-semibold uppercase tracking-[0.16em] text-[#3A342C] transition-colors hover:text-[#1A3A28] " +
     className;
 
   if (item.type === "contact") {
@@ -27,7 +27,7 @@ function NavLink({ item, onClick, className = "" }) {
           openBooking();
         }}
         className={base}
-        style={{ fontFamily: "'Lato', sans-serif" }}
+        style={{ fontFamily: "'Montserrat', sans-serif" }}
       >
         {item.label}
       </button>
@@ -40,7 +40,7 @@ function NavLink({ item, onClick, className = "" }) {
         to={item.href}
         onClick={onClick}
         className={base}
-        style={{ fontFamily: "'Lato', sans-serif" }}
+        style={{ fontFamily: "'Montserrat', sans-serif" }}
       >
         {item.label}
       </Link>
@@ -52,7 +52,7 @@ function NavLink({ item, onClick, className = "" }) {
       href={item.href}
       onClick={onClick}
       className={base}
-      style={{ fontFamily: "'Lato', sans-serif" }}
+      style={{ fontFamily: "'Montserrat', sans-serif" }}
     >
       {item.label}
     </a>
@@ -90,7 +90,7 @@ export default function Navbar() {
             type="button"
             onClick={() => openBooking()}
             className="hidden items-center rounded-full bg-[#1A3A28] px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#F7F1E4] transition-colors hover:bg-[#123A1A] sm:inline-flex"
-            style={{ fontFamily: "'Lato', sans-serif" }}
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             Book a Session
           </button>
@@ -127,7 +127,7 @@ export default function Navbar() {
                 openBooking();
               }}
               className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#1A3A28] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#F7F1E4] transition-colors hover:bg-[#123A1A] sm:hidden"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               Book a Session
             </button>

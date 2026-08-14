@@ -93,7 +93,7 @@ function ArticleCard({ article }) {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/18 via-transparent to-transparent" />
         <span
           className="absolute bottom-3 left-4 rounded-md bg-[#123A1A] border border-[#C4A15A]/30 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#C4A15A] shadow-[0_4px_10px_rgba(90,68,28,0.18)]"
-          style={{ fontFamily: "'Lato', sans-serif" }}
+          style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
           {article.badge}
         </span>
@@ -114,8 +114,8 @@ function ArticleCard({ article }) {
         </div>
 
         <p
-          className="mb-5 flex-1 text-[14px] leading-relaxed font-light text-[#5C5348]"
-          style={{ fontFamily: "'Lora', serif" }}
+          className="mb-5 flex-1 text-[17.5px] md:text-[18.5px] leading-relaxed font-normal text-[#4A4235]"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
           {article.description}
         </p>
@@ -123,7 +123,7 @@ function ArticleCard({ article }) {
         <a
           href="/blog"
           className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#B08A3A] transition-colors hover:text-[#8C6621]"
-          style={{ fontFamily: "'Lato', sans-serif" }}
+          style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
           Read More
           <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -139,25 +139,17 @@ export default function WisdomTeachings() {
   return (
     <section
       id="blog"
-      className="relative overflow-hidden border-b border-[#D9C79E]/30 py-8 sm:py-10"
-      style={{ backgroundColor: "#FBF6EE" }}
+      className="relative overflow-hidden border-b border-[#D9C79E]/30 py-8 sm:py-10 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url('/ChatGPT Image Aug 14, 2026, 09_40_16 AM.png')` }}
     >
-      {/* Warm paper wash */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,252,246,0.9)_0%,_rgba(251,246,238,0.4)_55%,_transparent_100%)]" />
-
-
-
-      {/* Soft sunbeam — top right */}
-      <div className="pointer-events-none absolute -right-24 -top-24 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,_rgba(232,196,130,0.38)_0%,_rgba(232,196,130,0.12)_38%,_transparent_68%)] blur-2xl" />
-      <div className="pointer-events-none absolute right-0 top-0 h-56 w-72 bg-[linear-gradient(135deg,_rgba(255,236,200,0.45)_0%,_transparent_60%)]" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-8">
         <header className="mb-6 flex flex-col items-center text-center md:mb-8">
           <div className="mb-2 flex items-center justify-center gap-3">
             <span className="h-px w-10 bg-[#C4A15A]/70 sm:w-14" />
             <span
-              className="text-[11px] font-medium uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[12px]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[12px]"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               Wisdom &amp; Teachings
             </span>
@@ -180,8 +172,8 @@ export default function WisdomTeachings() {
           </div>
 
           <p
-            className="max-w-xl text-[14.5px] leading-relaxed font-light text-[#5C5348] sm:text-[16px]"
-            style={{ fontFamily: "'Lora', serif" }}
+            className="max-w-xl text-[17px] leading-relaxed font-normal text-[#5C5348] sm:text-[18.5px]"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Insights, reflections, and teachings to inspire clarity, inner peace, and transformation.
           </p>
@@ -202,7 +194,7 @@ export default function WisdomTeachings() {
           <a
             href="/blog"
             className="inline-flex items-center gap-2.5 rounded-full border border-[#C4A15A]/70 bg-[#123A1A] hover:bg-[#0d2a13] px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#C4A15A] shadow-[0_10px_24px_-12px_rgba(18,58,26,0.55)] transition-all duration-300 hover:scale-[1.03] sm:px-8 sm:py-3.5 sm:text-[12px]"
-            style={{ fontFamily: "'Lato', sans-serif" }}
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             <BookIcon className="h-4 w-4 text-[#C4A15A]" />
             Explore All Articles

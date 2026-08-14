@@ -64,7 +64,7 @@ function ColumnTitle({ children }) {
     <div className="mb-5">
       <h3
         className="engrave-gold-dark text-[12px] font-semibold uppercase tracking-[0.28em]"
-        style={{ fontFamily: "'Lato', sans-serif" }}
+        style={{ fontFamily: "'Montserrat', sans-serif" }}
       >
         {children}
       </h3>
@@ -79,8 +79,8 @@ function ColumnTitle({ children }) {
 
 function FooterLink({ href, children }) {
   const { openBooking } = useBookingModal();
-  const className = "block text-[13.5px] text-[#F4EFE6]/90 transition-colors hover:text-[#C5A060]";
-  const style = { fontFamily: "'Lato', sans-serif" };
+  const className = "block text-[16px] text-[#F4EFE6]/85 transition-colors hover:text-[#C5A060] font-normal";
+  const style = { fontFamily: "'Cormorant Garamond', serif" };
 
   if (href === "#book" || href === "/#book" || href === "/#contact") {
     return (
@@ -156,19 +156,28 @@ export default function SiteFooter() {
   return (
     <footer>
       {/* Pre-footer CTA */}
-      <section className="relative overflow-hidden border-t border-[#E8DCC8]/80" style={{ backgroundColor: "#F5F2EB" }}>
-        <div className="pointer-events-none absolute left-0 top-0 h-40 w-40 bg-[radial-gradient(circle,_rgba(140,160,110,0.18)_0%,_transparent_70%)] blur-2xl" />
+      <section
+        className="relative overflow-hidden border-t border-[#E8DCC8]/80"
+        style={{
+          backgroundImage: "url('/74fd15d4-86e2-4838-a29b-5a13facc418d.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center bottom",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* Light overlay to keep text readable */}
+        <div className="absolute inset-0 bg-[#F5F2EB]/88 pointer-events-none" />
 
         <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-6 px-5 py-6 sm:px-8 md:grid-cols-[1fr_auto_1.4fr] md:gap-8 md:py-8">
           <div>
             <p
-              className="engrave-ink text-[26px] leading-tight sm:text-[30px]"
+              className="engrave-ink text-[26px] leading-tight sm:text-[30px] font-semibold"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Your journey matters.
             </p>
             <p
-              className="engrave-gold mt-1 text-[28px] leading-tight sm:text-[32px]"
+              className="engrave-gold mt-1 text-[28px] leading-tight sm:text-[32px] font-semibold"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               We&apos;re here for you.
@@ -187,14 +196,14 @@ export default function SiteFooter() {
               </span>
               <div>
                 <h3
-                  className="engrave-ink text-[20px] leading-tight sm:text-[22px]"
+                  className="engrave-ink text-[22px] leading-tight sm:text-[25px] font-semibold"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   Ready to begin?
                 </h3>
                 <p
-                  className="mt-1 text-[13px] text-[#5C5348] sm:text-[14px]"
-                  style={{ fontFamily: "'Lora', serif" }}
+                  className="mt-1 text-[17px] text-[#4A4235] sm:text-[18.5px] font-normal leading-relaxed"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   Book a personalized session and take the first step.
                 </p>
@@ -205,7 +214,7 @@ export default function SiteFooter() {
               type="button"
               onClick={() => openBooking()}
               className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[#C4A15A]/70 bg-[#123A1A] hover:bg-[#0d2a13] px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C4A15A] shadow-[0_10px_24px_-12px_rgba(18,58,26,0.55)] transition-all hover:scale-[1.02]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               Book Your Session
               <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 text-[#C4A15A]" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -217,13 +226,17 @@ export default function SiteFooter() {
       </section>
 
       {/* Main footer */}
-      <section className="relative overflow-hidden bg-[#0d1e1c] text-white">
-        <img
-          src={stillLifeImg}
-          alt=""
-          aria-hidden
-          className="pointer-events-none absolute -bottom-8 -left-6 w-52 opacity-70 mix-blend-lighten sm:w-64 md:w-72"
-        />
+      <section
+        className="relative overflow-hidden text-white"
+        style={{
+          backgroundImage: "url('/74fd15d4-86e2-4838-a29b-5a13facc418d.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* Dark overlay for legibility */}
+        <div className="absolute inset-0 bg-[#0d1e1c]/85 pointer-events-none" />
 
         <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-12 lg:gap-0 lg:py-16">
           <div className="lg:col-span-3 lg:pr-8">
@@ -244,8 +257,8 @@ export default function SiteFooter() {
               <span className="h-px flex-1 bg-[#C5A060]/70" />
             </div>
             <p
-              className="mb-5 max-w-[220px] text-[13px] leading-relaxed text-white/80"
-              style={{ fontFamily: "'Lora', serif" }}
+              className="mb-8 sm:mb-9 max-w-[240px] text-[16.5px] leading-relaxed text-white/85 font-normal"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Guiding you to inner clarity, emotional balance and spiritual transformation.
             </p>
@@ -259,7 +272,7 @@ export default function SiteFooter() {
 
           <div className="lg:col-span-2 lg:border-l lg:border-[#C5A060]/25 lg:px-7">
             <ColumnTitle>Explore</ColumnTitle>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {exploreLinks.map((link) => (
                 <li key={link.label}>
                   <FooterLink href={link.href}>{link.label}</FooterLink>
@@ -270,7 +283,7 @@ export default function SiteFooter() {
 
           <div className="lg:col-span-2 lg:border-l lg:border-[#C5A060]/25 lg:px-7">
             <ColumnTitle>Services</ColumnTitle>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {serviceLinks.map((link) => (
                 <li key={link.label}>
                   <FooterLink href={link.href}>{link.label}</FooterLink>
@@ -281,7 +294,7 @@ export default function SiteFooter() {
 
           <div className="lg:col-span-2 lg:border-l lg:border-[#C5A060]/25 lg:px-7">
             <ColumnTitle>Resources</ColumnTitle>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {resourceLinks.map((link) => (
                 <li key={link.label}>
                   <FooterLink href={link.href}>{link.label}</FooterLink>
@@ -293,16 +306,16 @@ export default function SiteFooter() {
           <div className="lg:col-span-3 lg:border-l lg:border-[#C5A060]/25 lg:pl-7">
             <ColumnTitle>Stay Connected</ColumnTitle>
             <p
-              className="mb-4 text-[13px] leading-relaxed text-white/80"
-              style={{ fontFamily: "'Lora', serif" }}
+              className="mb-4 text-[16.5px] leading-relaxed text-white/85 font-normal"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Get wisdom, updates and invitations to our events.
             </p>
 
             {subscribed ? (
               <p
-                className="text-[13.5px] text-[#C5A060]"
-                style={{ fontFamily: "'Lora', serif" }}
+                className="text-[16.5px] text-[#C5A060] font-normal"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 Thank you — you&apos;re on the list.
               </p>
@@ -316,8 +329,8 @@ export default function SiteFooter() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Your email address"
-                    className="w-full rounded-md border border-white/25 bg-transparent px-3 py-2.5 pr-10 text-[13px] text-white outline-none placeholder:text-white/45 focus:border-[#C5A060]"
-                    style={{ fontFamily: "'Lato', sans-serif" }}
+                    className="w-full rounded-md border border-white/25 bg-transparent px-3.5 py-2.5 pr-10 text-[16px] text-white outline-none placeholder:text-white/45 focus:border-[#C5A060]"
+                    style={{ fontFamily: "'Cormorant Garamond', serif" }}
                   />
                   <svg viewBox="0 0 24 24" aria-hidden className="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-white/50" fill="none" stroke="currentColor" strokeWidth="1.6">
                     <rect x="3.5" y="5.5" width="17" height="13" rx="2" />
@@ -327,15 +340,15 @@ export default function SiteFooter() {
                 <button
                   type="submit"
                   className="w-full rounded-md bg-gradient-to-b from-[#d4b36a] to-[#a67b2a] px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-[0_8px_18px_-10px_rgba(166,123,42,0.7)] transition-all hover:brightness-110"
-                  style={{ fontFamily: "'Lato', sans-serif" }}
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
                   Subscribe
                 </button>
               </form>
             )}
             <p
-              className="mt-3 text-[11px] leading-relaxed text-white/45"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              className="mt-3 text-[14.5px] leading-relaxed text-white/60 font-normal"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               We respect your privacy. Unsubscribe at any time.
             </p>
@@ -346,8 +359,8 @@ export default function SiteFooter() {
         <div className="relative z-10 border-t border-white/10">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 py-5 text-center sm:px-8 md:flex-row md:justify-between md:text-left">
             <p
-              className="text-[12px] text-white/55"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              className="text-[15px] text-white/70 font-normal"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               © 2025 The Mystic Guru. All Rights Reserved.
             </p>
@@ -361,8 +374,8 @@ export default function SiteFooter() {
             </div>
 
             <p
-              className="text-[12px] text-white/55"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              className="text-[15px] text-white/70 font-normal"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               <a href="#privacy" className="transition-colors hover:text-[#C5A060]">Privacy Policy</a>
               <span className="mx-1.5 text-white/30">|</span>

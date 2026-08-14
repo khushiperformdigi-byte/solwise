@@ -183,16 +183,16 @@ function Field({ label, icon, children }) {
   return (
     <label className="block">
       <span
-        className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#3A342C]"
-        style={{ fontFamily: "'Lato', sans-serif" }}
+        className="mb-1.5 block text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.14em] text-[#2C261E]"
+        style={{ fontFamily: "'Montserrat', sans-serif" }}
       >
         {label}
       </span>
       <span className="relative block">
         {children}
         {icon && (
-          <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-[#B08A3A]">
-            <Icon type={icon} className="h-4 w-4" />
+          <span className="pointer-events-none absolute top-1/2 right-3.5 -translate-y-1/2 text-[#B08A3A]">
+            <Icon type={icon} className="h-4.5 w-4.5" />
           </span>
         )}
       </span>
@@ -201,7 +201,7 @@ function Field({ label, icon, children }) {
 }
 
 const inputClass =
-  "w-full rounded-lg border border-[#E2D6C2] bg-[#FFFcf8] px-3.5 py-2 pr-10 text-[14px] text-[#2C261E] outline-none transition-colors placeholder:text-[#A39888] focus:border-[#C4A15A] focus:ring-2 focus:ring-[#C4A15A]/20";
+  "w-full rounded-lg border border-[#E2D6C2] bg-[#FFFcf8] px-4 py-2.5 pr-10 text-[16.5px] sm:text-[17.5px] text-[#2C261E] outline-none transition-colors placeholder:text-[#A39888] focus:border-[#C4A15A] focus:ring-2 focus:ring-[#C4A15A]/20";
 
 export default function BookSession() {
   const [form, setForm] = useState({
@@ -229,60 +229,60 @@ export default function BookSession() {
       <div id="contact" className="h-0 scroll-mt-28" />
       <section
         id="book"
-        className="relative overflow-hidden border-b border-[#D9C79E]/30 py-8 sm:py-10"
-        style={{ backgroundColor: "#F9F8F4" }}
+        className="relative overflow-hidden border-b border-[#D9C79E]/30 py-8 sm:py-10 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url('/ChatGPT Image Aug 14, 2026, 12_05_33 PM.png')` }}
       >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,252,246,0.9)_0%,_transparent_70%)]" />
 
         <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-start gap-10 px-5 sm:px-8 lg:grid-cols-12 lg:gap-12">
-          {/* Left column */}
-          <div className="relative lg:col-span-5 lg:pt-2">
-            <div className="mb-2 flex items-center justify-center gap-3 w-full">
+          {/* Left column shifted downside with increased text sizes */}
+          <div className="relative lg:col-span-5 lg:pt-14">
+            <div className="mb-3 flex items-center justify-start gap-3 w-full">
               <span className="h-px w-10 bg-[#C4A15A]/70 sm:w-14" />
               <span
-                className="text-[11px] font-medium uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[12px]"
-                style={{ fontFamily: "'Lato', sans-serif" }}
+                className="text-[12px] font-semibold uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[13px]"
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 Book Your Session
               </span>
               <span className="h-px w-10 bg-[#C4A15A]/70 sm:w-14" />
             </div>
             <h2
-              className="mb-3 text-[34px] leading-[1.12] font-normal sm:text-[42px] md:text-[46px]"
+              className="mb-4 text-[38px] leading-[1.1] font-normal sm:text-[46px] md:text-[50px] lg:text-[52px]"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               <span className="engrave-green">Your Journey to </span>
-              <span className="engrave-gold italic">Clarity</span>
+              <span className="engrave-gold italic font-medium">Clarity</span>
               <br />
               <span className="engrave-green">Begins Here</span>
             </h2>
             <p
-              className="mb-9 max-w-md text-[14.5px] leading-relaxed font-light text-[#5C5348] sm:text-[15.5px]"
-              style={{ fontFamily: "'Lora', serif" }}
+              className="mb-10 md:mb-12 max-w-md text-[18.5px] leading-relaxed font-normal text-[#5C5348] sm:text-[20px] md:text-[21px]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Share a few details and I’ll create a space for healing, clarity and inner alignment — at a time that works for you.
             </p>
 
-            <ul className="space-y-3.5">
+            <ul className="flex flex-col gap-8 sm:gap-9 lg:gap-10">
               {features.map((item) => (
-                <li key={item.title} className="flex gap-3.5">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#F3EAD8] text-[#C4A15A]">
-                    <Icon type={item.icon} className={item.icon === "sparkle" ? "h-4 w-4" : "h-5 w-5"} />
+                <li key={item.title} className="flex gap-4.5 items-start mb-2 sm:mb-3 last:mb-0">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F3EAD8] text-[#C4A15A] shadow-sm">
+                    <Icon type={item.icon} className={item.icon === "sparkle" ? "h-5 w-5" : "h-5.5 w-5.5"} />
                   </span>
-                  <span>
+                  <div>
                     <span
-                      className="engrave-green block text-[16px] font-semibold"
+                      className="engrave-green block text-[20px] md:text-[21px] font-semibold mb-1"
                       style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       {item.title}
                     </span>
                     <span
-                      className="mt-0.5 block text-[13px] leading-relaxed text-[#5C5348]"
-                      style={{ fontFamily: "'Lora', serif" }}
+                      className="block text-[16.5px] md:text-[17.5px] leading-relaxed text-[#5C5348] font-normal"
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       {item.text}
                     </span>
-                  </span>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -297,14 +297,14 @@ export default function BookSession() {
                 </span>
                 <div>
                   <h3
-                    className="engrave-green text-[24px] leading-tight font-medium sm:text-[26px]"
+                    className="engrave-green text-[24px] leading-tight font-semibold sm:text-[26px]"
                     style={{ fontFamily: "'Cormorant Garamond', serif" }}
                   >
                     Book a Session
                   </h3>
                   <p
-                    className="mt-1 text-[13.5px] text-[#6B6358]"
-                    style={{ fontFamily: "'Lora', serif" }}
+                    className="mt-1 text-[15px] text-[#6B6358] font-normal"
+                    style={{ fontFamily: "'Cormorant Garamond', serif" }}
                   >
                     Fill in the details below and I’ll get back to you soon.
                   </p>
@@ -315,14 +315,14 @@ export default function BookSession() {
                 <div className="rounded-xl bg-[#F7F1E7] px-5 py-10 text-center">
                   <LotusIcon className="mx-auto mb-3 h-8 w-8 text-[#C4A15A]" />
                   <p
-                    className="engrave-green text-[22px]"
+                    className="engrave-green text-[22px] font-semibold"
                     style={{ fontFamily: "'Cormorant Garamond', serif" }}
                   >
                     Your request has been received.
                   </p>
                   <p
-                    className="mt-2 text-[14px] text-[#5C5348]"
-                    style={{ fontFamily: "'Lora', serif" }}
+                    className="mt-2 text-[16px] text-[#5C5348] font-normal"
+                    style={{ fontFamily: "'Cormorant Garamond', serif" }}
                   >
                     I’ll review your details and reach out shortly to confirm your session.
                   </p>
@@ -338,7 +338,7 @@ export default function BookSession() {
                         onChange={(e) => update("name", e.target.value)}
                         placeholder="Your full name"
                         className={inputClass}
-                        style={{ fontFamily: "'Lora', serif" }}
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
                       />
                     </Field>
                     <Field label="Email Address" icon="email">
@@ -349,7 +349,7 @@ export default function BookSession() {
                         onChange={(e) => update("email", e.target.value)}
                         placeholder="you@email.com"
                         className={inputClass}
-                        style={{ fontFamily: "'Lora', serif" }}
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
                       />
                     </Field>
                     <Field label="Phone Number" icon="phone">
@@ -360,7 +360,7 @@ export default function BookSession() {
                         onChange={(e) => update("phone", e.target.value)}
                         placeholder="+91 00000 00000"
                         className={inputClass}
-                        style={{ fontFamily: "'Lora', serif" }}
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
                       />
                     </Field>
                     <Field label="Preferred Date" icon="calendar">
@@ -370,7 +370,7 @@ export default function BookSession() {
                         value={form.date}
                         onChange={(e) => update("date", e.target.value)}
                         className={inputClass}
-                        style={{ fontFamily: "'Lora', serif" }}
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
                       />
                     </Field>
                     <Field label="Preferred Time" icon="clock">
@@ -379,7 +379,7 @@ export default function BookSession() {
                         value={form.time}
                         onChange={(e) => update("time", e.target.value)}
                         className={`${inputClass} appearance-none bg-[#FFFcf8]`}
-                        style={{ fontFamily: "'Lora', serif" }}
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
                       >
                         <option value="">Select a time</option>
                         {timeSlots.map((slot) => (
@@ -395,7 +395,7 @@ export default function BookSession() {
                         value={form.sessionType}
                         onChange={(e) => update("sessionType", e.target.value)}
                         className={`${inputClass} appearance-none bg-[#FFFcf8]`}
-                        style={{ fontFamily: "'Lora', serif" }}
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
                       >
                         <option value="">Choose a session</option>
                         {sessionTypes.map((type) => (
@@ -414,7 +414,7 @@ export default function BookSession() {
                       onChange={(e) => update("message", e.target.value)}
                       placeholder="Share what you're seeking..."
                       className={`${inputClass} resize-y pt-3.5`}
-                      style={{ fontFamily: "'Lora', serif" }}
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     />
                   </Field>
 
@@ -424,8 +424,8 @@ export default function BookSession() {
                         <Icon type="leaf" className="h-4 w-4" />
                       </span>
                       <p
-                        className="text-[13px] leading-snug text-[#3A342C] sm:text-[13.5px]"
-                        style={{ fontFamily: "'Lora', serif" }}
+                        className="text-[14.5px] leading-snug text-[#3A342C] sm:text-[15.5px] font-normal"
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
                       >
                         Not sure yet? Book a free 15-minute clarity call to find the right path.
                       </p>
@@ -434,7 +434,7 @@ export default function BookSession() {
                       type="button"
                       onClick={() => update("sessionType", "Clarity Call (15 min)")}
                       className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[#C4A15A]/70 bg-[#123A1A] hover:bg-[#0d2a13] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#C4A15A] transition-all hover:scale-[1.03]"
-                      style={{ fontFamily: "'Lato', sans-serif" }}
+                      style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
                       <Icon type="phone" className="h-3.5 w-3.5 text-[#C4A15A]" />
                       Book a Clarity Call
@@ -444,27 +444,27 @@ export default function BookSession() {
                   <button
                     type="submit"
                     className="inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-[#123A1A] px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.18em] text-[#C4A15A] shadow-[0_10px_24px_-12px_rgba(18,58,26,0.55)] border border-[#C4A15A]/35 transition-all duration-300 hover:bg-[#0d2a13] hover:scale-[1.01]"
-                    style={{ fontFamily: "'Lato', sans-serif" }}
+                    style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
                     <Icon type="calendar" className="h-4 w-4 text-[#C4A15A]" />
                     Book My Session
                   </button>
 
-                  <div className="grid grid-cols-1 gap-3 border-t border-[#E8DCC8] pt-4 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-[#E8DCC8]">
+                  <div className="grid grid-cols-1 gap-3 border-t border-[#E8DCC8] pt-5 mt-2 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-[#E8DCC8]">
                     {trustItems.map((item) => (
-                      <div key={item.title} className="flex flex-col items-center px-2 text-center">
-                        <span className="mb-1.5 text-[#C4A15A]">
-                          <Icon type={item.icon} className="h-4 w-4" />
+                      <div key={item.title} className="flex flex-col items-center px-2 text-center py-1">
+                        <span className="mb-2 text-[#C4A15A]">
+                          <Icon type={item.icon} className="h-5 w-5" />
                         </span>
                         <span
-                          className="engrave-green text-[12.5px] font-semibold"
-                          style={{ fontFamily: "'Lato', sans-serif" }}
+                          className="engrave-green text-[14px] md:text-[15px] font-semibold"
+                          style={{ fontFamily: "'Montserrat', sans-serif" }}
                         >
                           {item.title}
                         </span>
                         <span
-                          className="mt-0.5 text-[11px] text-[#6B6358]"
-                          style={{ fontFamily: "'Lora', serif" }}
+                          className="mt-1 text-[15.5px] md:text-[16.5px] text-[#5C5348] font-normal leading-relaxed"
+                          style={{ fontFamily: "'Cormorant Garamond', serif" }}
                         >
                           {item.text}
                         </span>

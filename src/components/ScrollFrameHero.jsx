@@ -485,7 +485,7 @@ export default function ScrollFrameHero() {
             
 
             <h1
-              className="mt-4 w-full text-[34px] leading-[1.12] font-medium sm:mt-5 sm:text-[50px] md:text-[58px]"
+              className="mt-4 w-full text-[36px] leading-[1.12] font-medium sm:mt-5 sm:text-[52px] md:text-[62px]"
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 color: "#FDFBF7",
@@ -497,9 +497,9 @@ export default function ScrollFrameHero() {
               <span className="mt-1 block">
                 Purpose for the{" "}
                 <span
-                  className="italic"
+                  className="italic font-medium"
                   style={{
-                    fontFamily: "'Pinyon Script', 'Cormorant Garamond', serif",
+                    fontFamily: "'Cormorant Garamond', serif",
                     color: "#E4B85C",
                     textShadow:
                       "0 2px 4px rgba(0,0,0,0.4), 0 0 28px rgba(228,184,92,0.45)",
@@ -512,9 +512,9 @@ export default function ScrollFrameHero() {
             </h1>
 
             <p
-              className="mt-3 max-w-lg text-[14px] leading-[1.7] sm:mt-3.5 sm:text-[15.5px]"
+              className="mt-3 max-w-lg text-[16.5px] leading-[1.6] sm:mt-3.5 sm:text-[18.5px] font-normal"
               style={{
-                fontFamily: "'Lora', serif",
+                fontFamily: "'Cormorant Garamond', serif",
                 color: "#F3EDE3",
                 textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.35)",
               }}
@@ -528,14 +528,14 @@ export default function ScrollFrameHero() {
                 type="button"
                 onClick={() => openBooking()}
                 className="inline-flex items-center justify-center rounded-full bg-[#E4B85C] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#1A1408] transition-colors hover:bg-[#F0D08A]"
-                style={{ fontFamily: "'Lato', sans-serif" }}
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 Book a Session
               </button>
               <a
                 href="#programs"
                 className="inline-flex items-center justify-center rounded-full border border-[#F7F1E4]/70 bg-transparent px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#F7F1E4] transition-colors hover:border-[#E8C878] hover:text-[#E8C878]"
-                style={{ fontFamily: "'Lato', sans-serif" }}
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 View Programs
               </a>
@@ -558,8 +558,8 @@ export default function ScrollFrameHero() {
                 />
               </div>
               <p
-                className="text-[11px] tracking-[0.22em] text-[#C4A15A]/90 uppercase"
-                style={{ fontFamily: "'Lato', sans-serif" }}
+                className="text-[11px] tracking-[0.22em] text-[#C4A15A]/90 uppercase font-semibold"
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 Preparing cinematic sequence
               </p>
