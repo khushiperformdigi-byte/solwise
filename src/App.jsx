@@ -214,7 +214,7 @@ function App() {
 
           {/* Description Paragraph */}
           <p 
-            className="text-[17px] md:text-[19px] text-[#4A4235] tracking-wide leading-relaxed mb-12 md:mb-16 max-w-xl font-normal"
+            className="text-[17px] md:text-[19px] text-[#4A4235] tracking-wide leading-relaxed mb-16 md:mb-20 max-w-xl font-normal"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             A holistic approach to awaken your inner wisdom,<br />
@@ -222,7 +222,7 @@ function App() {
           </p>
 
           {/* 4-Step Process Flow with Golden Badges & Connecting Arrows */}
-          <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 items-start justify-items-center mb-10 md:mb-12 relative">
+          <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 items-start justify-items-center mb-14 md:mb-18 relative">
             
             {/* Step 1: AWAKEN */}
             <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
@@ -320,7 +320,7 @@ function App() {
           </div>
 
           {/* Lotus Emblem Divider 2 (above button) */}
-          <div className="flex items-center justify-center gap-3 my-2 w-full max-w-xs">
+          <div className="flex items-center justify-center gap-3 my-4 md:my-6 w-full max-w-xs">
             <span className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-[#C49A45]/60 to-[#C49A45]"></span>
             <div className="relative flex items-center justify-center">
               <svg viewBox="0 0 100 100" className="h-5 w-5 text-[#C49A45]" fill="currentColor">
@@ -730,7 +730,7 @@ function App() {
 
                 {/* Description */}
                 <p 
-                  className="text-[16px] md:text-[17.5px] text-[#5A5042] tracking-wide leading-relaxed mb-8 md:mb-10 max-w-md font-normal"
+                  className="text-[16px] md:text-[17.5px] text-[#5A5042] tracking-wide leading-relaxed mb-12 md:mb-14 max-w-md font-normal"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   A glimpse into the world of healing, wisdom and transformation that awaits you. Feel the energy. Sense the shift. Begin within.
