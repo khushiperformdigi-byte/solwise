@@ -191,10 +191,9 @@ export default function WorkshopsRetreats() {
   return (
     <section
       id="events"
-      className="relative overflow-hidden border-b border-[#D9C79E]/30 py-6 sm:py-8"
-      style={{ backgroundColor: "#FDFBF7" }}
+      className="relative overflow-hidden border-b border-[#D9C79E]/30 py-6 sm:py-8 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url('/ChatGPT Image Aug 14, 2026, 10_53_53 AM.png')` }}
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,252,246,0.9)_0%,_transparent_70%)]" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-8">
         <header className="mb-5 flex flex-col items-center text-center md:mb-7">

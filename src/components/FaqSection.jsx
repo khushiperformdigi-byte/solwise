@@ -176,10 +176,9 @@ export default function FaqSection() {
   return (
     <section
       id="faq"
-      className="relative overflow-hidden border-b border-[#D9C79E]/30 py-8 sm:py-10"
-      style={{ backgroundColor: "#FAF7F1" }}
+      className="relative overflow-hidden border-b border-[#D9C79E]/30 py-8 sm:py-10 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url('/ChatGPT Image Aug 14, 2026, 10_57_50 AM.png')` }}
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,252,246,0.92)_0%,_transparent_70%)]" />
 
       <div className="relative z-10 mx-auto w-full max-w-3xl px-5 sm:px-8">
         <header className="mb-5 flex flex-col items-center text-center md:mb-7">

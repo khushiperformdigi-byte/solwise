@@ -139,17 +139,9 @@ export default function WisdomTeachings() {
   return (
     <section
       id="blog"
-      className="relative overflow-hidden border-b border-[#D9C79E]/30 py-8 sm:py-10"
-      style={{ backgroundColor: "#FBF6EE" }}
+      className="relative overflow-hidden border-b border-[#D9C79E]/30 py-8 sm:py-10 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url('/ChatGPT Image Aug 14, 2026, 09_40_16 AM.png')` }}
     >
-      {/* Warm paper wash */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,252,246,0.9)_0%,_rgba(251,246,238,0.4)_55%,_transparent_100%)]" />
-
-
-
-      {/* Soft sunbeam — top right */}
-      <div className="pointer-events-none absolute -right-24 -top-24 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,_rgba(232,196,130,0.38)_0%,_rgba(232,196,130,0.12)_38%,_transparent_68%)] blur-2xl" />
-      <div className="pointer-events-none absolute right-0 top-0 h-56 w-72 bg-[linear-gradient(135deg,_rgba(255,236,200,0.45)_0%,_transparent_60%)]" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-8">
         <header className="mb-6 flex flex-col items-center text-center md:mb-8">
