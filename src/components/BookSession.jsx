@@ -266,12 +266,12 @@ export default function BookSession() {
             <ul className="space-y-7 md:space-y-8">
               {features.map((item) => (
                 <li key={item.title} className="flex gap-4 items-start">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F3EAD8] text-[#C4A15A] shadow-sm mt-0.5">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F3EAD8] text-[#C4A15A] shadow-sm">
                     <Icon type={item.icon} className={item.icon === "sparkle" ? "h-5 w-5" : "h-5.5 w-5.5"} />
                   </span>
                   <div>
                     <span
-                      className="engrave-green block text-[20px] md:text-[21px] font-semibold mb-1"
+                      className="engrave-green block text-[20px] md:text-[21px] font-semibold mb-0.5"
                       style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       {item.title}
