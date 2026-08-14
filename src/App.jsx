@@ -214,7 +214,7 @@ function App() {
 
           {/* Description Paragraph */}
           <p 
-            className="text-[17px] md:text-[19px] text-[#4A4235] tracking-wide leading-relaxed mb-8 max-w-xl font-normal"
+            className="text-[17px] md:text-[19px] text-[#4A4235] tracking-wide leading-relaxed mb-12 md:mb-16 max-w-xl font-normal"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             A holistic approach to awaken your inner wisdom,<br />
@@ -222,10 +222,10 @@ function App() {
           </p>
 
           {/* 4-Step Process Flow with Golden Badges & Connecting Arrows */}
-          <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-2 items-start justify-items-center mb-8 relative">
+          <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 items-start justify-items-center mb-10 md:mb-12 relative">
             
             {/* Step 1: AWAKEN */}
-            <div className="flex flex-col items-center text-center max-w-[180px] relative w-full group">
+            <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
               <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] group-hover:from-[#123A1A] group-hover:to-[#0d2a13] border border-[#E0D0B5] group-hover:border-[#C4A15A]/45 shadow-md flex items-center justify-center mb-3 group-hover:scale-105 transition-all duration-300 text-[#B88A2E] group-hover:text-[#C4A15A]">
                 <svg viewBox="0 0 24 24" className="h-8 w-8 transition-colors duration-300" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M12 4C10 8 6 10 7 14C8 14 10 12 12 8C14 12 16 14 17 14C18 10 14 8 12 4Z" fill="currentColor" opacity="0.25" />
@@ -233,10 +233,10 @@ function App() {
                   <path d="M12 8C7 12 3 14 4 18C6 18 9 16 12 12C15 16 18 18 20 18C21 14 17 12 12 8Z" />
                 </svg>
               </div>
-              <h3 className="engrave-green text-[13px] font-semibold tracking-[0.18em] uppercase mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              <h3 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold tracking-[0.2em] uppercase mb-1.5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 AWAKEN
               </h3>
-              <p className="text-[14.5px] text-[#5A5042] leading-snug font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              <p className="text-[17px] md:text-[18.5px] text-[#4A4235] leading-snug font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 Reconnect with your true self
               </p>
             </div>
@@ -250,7 +250,7 @@ function App() {
             </div>
 
             {/* Step 2: ALIGN */}
-            <div className="flex flex-col items-center text-center max-w-[180px] relative w-full group">
+            <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
               <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] group-hover:from-[#123A1A] group-hover:to-[#0d2a13] border border-[#E0D0B5] group-hover:border-[#C4A15A]/45 shadow-md flex items-center justify-center mb-3 group-hover:scale-105 transition-all duration-300 text-[#B88A2E] group-hover:text-[#C4A15A]">
                 <svg viewBox="0 0 24 24" className="h-7 w-7 transition-colors duration-300" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <ellipse cx="12" cy="18" rx="7" ry="2.5" fill="currentColor" opacity="0.2" />
@@ -260,10 +260,10 @@ function App() {
                   <ellipse cx="12" cy="5.5" rx="2" ry="1" />
                 </svg>
               </div>
-              <h3 className="engrave-green text-[13px] font-semibold tracking-[0.18em] uppercase mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              <h3 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold tracking-[0.2em] uppercase mb-1.5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 ALIGN
               </h3>
-              <p className="text-[14.5px] text-[#5A5042] leading-snug font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              <p className="text-[17px] md:text-[18.5px] text-[#4A4235] leading-snug font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 Bring harmony to mind, body & soul
               </p>
             </div>
@@ -277,17 +277,17 @@ function App() {
             </div>
 
             {/* Step 3: HEAL */}
-            <div className="flex flex-col items-center text-center max-w-[180px] relative w-full group">
+            <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
               <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] group-hover:from-[#123A1A] group-hover:to-[#0d2a13] border border-[#E0D0B5] group-hover:border-[#C4A15A]/45 shadow-md flex items-center justify-center mb-3 group-hover:scale-105 transition-all duration-300 text-[#B88A2E] group-hover:text-[#C4A15A]">
                 <svg viewBox="0 0 24 24" className="h-7 w-7 transition-colors duration-300" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor" opacity="0.2" />
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                 </svg>
               </div>
-              <h3 className="engrave-green text-[13px] font-semibold tracking-[0.18em] uppercase mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              <h3 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold tracking-[0.2em] uppercase mb-1.5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 HEAL
               </h3>
-              <p className="text-[14.5px] text-[#5A5042] leading-snug font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              <p className="text-[17px] md:text-[18.5px] text-[#4A4235] leading-snug font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 Release limitations and past blocks
               </p>
             </div>
@@ -301,7 +301,7 @@ function App() {
             </div>
 
             {/* Step 4: TRANSFORM */}
-            <div className="flex flex-col items-center text-center max-w-[180px] relative w-full group">
+            <div className="flex flex-col items-center text-center max-w-[210px] relative w-full group">
               <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] group-hover:from-[#123A1A] group-hover:to-[#0d2a13] border border-[#E0D0B5] group-hover:border-[#C4A15A]/45 shadow-md flex items-center justify-center mb-3 group-hover:scale-105 transition-all duration-300 text-[#B88A2E] group-hover:text-[#C4A15A]">
                 <svg viewBox="0 0 24 24" className="h-7 w-7 transition-colors duration-300" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <circle cx="12" cy="7" r="3" fill="currentColor" opacity="0.3" />
@@ -309,10 +309,10 @@ function App() {
                   <path d="M12 10v7M8 21h8M9 13l3 2 3-2" />
                 </svg>
               </div>
-              <h3 className="engrave-green text-[13px] font-semibold tracking-[0.18em] uppercase mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              <h3 className="engrave-green text-[13.5px] md:text-[14.5px] font-semibold tracking-[0.2em] uppercase mb-1.5" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 TRANSFORM
               </h3>
-              <p className="text-[14.5px] text-[#5A5042] leading-snug font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              <p className="text-[17px] md:text-[18.5px] text-[#4A4235] leading-snug font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 Live with clarity, peace and purpose
               </p>
             </div>
@@ -391,20 +391,20 @@ function App() {
 
           {/* Tagline Description */}
           <p 
-            className="text-[17px] md:text-[18.5px] text-[#5A5042] tracking-wide leading-relaxed mb-8 max-w-xl font-normal"
+            className="text-[17px] md:text-[18.5px] text-[#5A5042] tracking-wide leading-relaxed mb-12 md:mb-16 max-w-xl font-normal"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Personalized spiritual programs and ancient wisdom practices to help you heal, align, and transform your life.
           </p>
 
           {/* 7 Program Cards Grid */}
-          <div className="w-full flex flex-col gap-5 mb-8">
+          <div className="w-full flex flex-col gap-6 lg:gap-7 mb-10 md:mb-14">
             
             {/* Row 1: 4 columns on desktop, 2 on tablet, 1 on mobile */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
               
               {/* Card 1 */}
-              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-5 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[285px] w-full mx-auto">
+              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
                 <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
                   <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M50 25 C45 45 35 50 38 65 C43 65 48 55 50 40 C52 55 57 65 62 65 C65 50 55 45 50 25 Z" fill="currentColor" opacity="0.15" />
@@ -413,10 +413,10 @@ function App() {
                     <path d="M35 60 C35 55 40 55 43 57 M65 60 C65 55 60 55 57 57" strokeLinecap="round" />
                   </svg>
                 </div>
-                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[20px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Life Coaching<br />& Guidance
                 </h3>
-                <p className="text-[14.5px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-[16px] md:text-[17px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   One-on-one guidance to bring clarity, purpose and direction to your life.
                 </p>
                 <div className="mt-auto pt-3">
@@ -427,7 +427,7 @@ function App() {
               </div>
 
               {/* Card 2 */}
-              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-5 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[285px] w-full mx-auto">
+              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
                 <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
                   <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="currentColor">
                     <polygon points="50,25 62,55 50,75 38,55" fill="currentColor" opacity="0.3" stroke="currentColor" strokeWidth="1.5" />
@@ -436,10 +436,10 @@ function App() {
                     <path d="M28,25 L32,25 M30,23 L30,27 M68,25 L72,25 M70,23 L70,27" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                   </svg>
                 </div>
-                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[20px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Crystal Guidance<br />& Energy Healing
                 </h3>
-                <p className="text-[14.5px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-[16px] md:text-[17px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Harness the healing energy of crystals to balance, protect and uplift your energy.
                 </p>
                 <div className="mt-auto pt-3">
@@ -450,7 +450,7 @@ function App() {
               </div>
 
               {/* Card 3 */}
-              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-5 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[285px] w-full mx-auto">
+              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
                 <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
                   <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <circle cx="50" cy="50" r="28" strokeDasharray="3,3" opacity="0.5" />
@@ -459,10 +459,10 @@ function App() {
                     <path d="M50 45 C44 48 42 53 42 62 L58 62 C58 53 56 48 50 45 Z" fill="currentColor" opacity="0.8" />
                   </svg>
                 </div>
-                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[20px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Aura Reading<br />& Analysis
                 </h3>
-                <p className="text-[14.5px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-[16px] md:text-[17px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Discover insights about your energy field and emotional, mental & spiritual well-being.
                 </p>
                 <div className="mt-auto pt-3">
@@ -473,7 +473,7 @@ function App() {
               </div>
 
               {/* Card 4 */}
-              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-5 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[285px] w-full mx-auto">
+              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
                 <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
                   <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="none" stroke="currentColor" strokeWidth="1">
                     <circle cx="50" cy="50" r="25" strokeWidth="1.5" />
@@ -490,10 +490,10 @@ function App() {
                     <text x="64" y="66" fontSize="10" fontFamily="serif" fontWeight="bold" fill="currentColor" textAnchor="middle">4</text>
                   </svg>
                 </div>
-                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[20px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Astro Numerology<br />Consultation
                 </h3>
-                <p className="text-[14.5px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-[16px] md:text-[17px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Decode the hidden meanings of numbers and align with your life's true path.
                 </p>
                 <div className="mt-auto pt-3">
@@ -506,10 +506,10 @@ function App() {
             </div>
 
             {/* Row 2: 3 columns centered on desktop, 2 on tablet, 1 on mobile */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto w-full justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7 max-w-4xl mx-auto w-full justify-center">
               
               {/* Card 5 */}
-              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-5 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[285px] w-full mx-auto">
+              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
                 <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
                   <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <circle cx="50" cy="50" r="26" />
@@ -518,10 +518,10 @@ function App() {
                     <line x1="28" y1="50" x2="72" y2="50" />
                   </svg>
                 </div>
-                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[20px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Vaastu Consultation<br />& Corrections
                 </h3>
-                <p className="text-[14.5px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-[16px] md:text-[17px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Create harmony in your space and life with ancient Vaastu principles.
                 </p>
                 <div className="mt-auto pt-3">
@@ -532,7 +532,7 @@ function App() {
               </div>
 
               {/* Card 6 */}
-              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-5 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[285px] w-full mx-auto">
+              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
                 <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
                   <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M50 20 C42 38 25 48 32 62 C38 62 45 48 50 30 C55 48 62 62 68 62 C75 48 58 38 50 20 Z" fill="currentColor" opacity="0.4" />
@@ -541,10 +541,10 @@ function App() {
                     <path d="M30 70 Q50 78 70 70 M38 76 Q50 82 62 76" strokeLinecap="round" />
                   </svg>
                 </div>
-                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[20px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Meditations
                 </h3>
-                <p className="text-[14.5px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-[16px] md:text-[17px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Guided meditations to calm your mind, awaken within and elevate your soul.
                 </p>
                 <div className="mt-auto pt-3">
@@ -555,7 +555,7 @@ function App() {
               </div>
 
               {/* Card 7 */}
-              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-5 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[285px] w-full mx-auto">
+              <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
                 <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
                   <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M50 30 A8 8 0 0 0 50 46 A8 8 0 0 0 50 30 Z" fill="currentColor" opacity="0.35" />
@@ -563,10 +563,10 @@ function App() {
                     <path d="M50 20 L50 25 M50 75 L50 80 M20 50 L25 50 M75 50 L80 50 M29 29 L33 33 M71 71 L75 75 M29 71 L33 67 M71 29 L75 33" strokeLinecap="round" strokeWidth="2" />
                   </svg>
                 </div>
-                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[20px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Aura Reset<br />Self-Healing Workshops
                 </h3>
-                <p className="text-[14.5px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                <p className="text-[16px] md:text-[17px] text-[#5A5042] group-hover:!text-[#FAF5EC] leading-relaxed font-normal transition-colors duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Learn powerful self-healing techniques to cleanse, reset and renew your energy.
                 </p>
                 <div className="mt-auto pt-3">
