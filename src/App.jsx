@@ -599,8 +599,8 @@ function App() {
 
       {/* Cinematic Experience Section matching Image 1 & Image 2 */}
       <section 
-        className="relative w-full flex flex-col justify-center py-10 md:py-14 border-b border-[#D9C79E]/30"
-        style={{ backgroundImage: `url(/cinematic_bg.png)` }}
+        className="relative w-full flex flex-col justify-center py-10 md:py-14 border-b border-[#D9C79E]/30 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url('/ChatGPT Image Aug 14, 2026, 12_14_07 PM.png')` }}
       >
         <div className="relative z-10 w-full max-w-5xl mx-auto px-4 md:px-6">
           
