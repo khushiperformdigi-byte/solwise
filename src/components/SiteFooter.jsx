@@ -156,8 +156,17 @@ export default function SiteFooter() {
   return (
     <footer>
       {/* Pre-footer CTA */}
-      <section className="relative overflow-hidden border-t border-[#E8DCC8]/80" style={{ backgroundColor: "#F5F2EB" }}>
-        <div className="pointer-events-none absolute left-0 top-0 h-40 w-40 bg-[radial-gradient(circle,_rgba(140,160,110,0.18)_0%,_transparent_70%)] blur-2xl" />
+      <section
+        className="relative overflow-hidden border-t border-[#E8DCC8]/80"
+        style={{
+          backgroundImage: "url('/74fd15d4-86e2-4838-a29b-5a13facc418d.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center bottom",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* Light overlay to keep text readable */}
+        <div className="absolute inset-0 bg-[#F5F2EB]/88 pointer-events-none" />
 
         <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-6 px-5 py-6 sm:px-8 md:grid-cols-[1fr_auto_1.4fr] md:gap-8 md:py-8">
           <div>
@@ -217,13 +226,17 @@ export default function SiteFooter() {
       </section>
 
       {/* Main footer */}
-      <section className="relative overflow-hidden bg-[#0d1e1c] text-white">
-        <img
-          src={stillLifeImg}
-          alt=""
-          aria-hidden
-          className="pointer-events-none absolute -bottom-8 -left-6 w-52 opacity-70 mix-blend-lighten sm:w-64 md:w-72"
-        />
+      <section
+        className="relative overflow-hidden text-white"
+        style={{
+          backgroundImage: "url('/74fd15d4-86e2-4838-a29b-5a13facc418d.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* Dark overlay for legibility */}
+        <div className="absolute inset-0 bg-[#0d1e1c]/85 pointer-events-none" />
 
         <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-10 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-12 lg:gap-0 lg:py-16">
           <div className="lg:col-span-3 lg:pr-8">
