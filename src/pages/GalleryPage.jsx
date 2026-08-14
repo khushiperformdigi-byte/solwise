@@ -1,21 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Navbar from "../components/Navbar";
 import SiteFooter from "../components/SiteFooter";
-import spiritualityImg from "../assets/wisdom/spirituality.jpg";
-import meditationImg from "../assets/wisdom/meditation.jpg";
-import healingImg from "../assets/wisdom/healing.jpg";
-import crystalsImg from "../assets/workshops/crystals.jpg";
-import retreatImg from "../assets/workshops/meditation.jpg";
-import numerologyImg from "../assets/workshops/numerology.jpg";
-import candleImg from "../assets/transformations/candle.jpg";
-import stillLifeImg from "../assets/booking/still-life.jpg";
-import candleVaseImg from "../assets/faq/candle-vase.jpg";
-import leavesImg from "../assets/faq/leaves.jpg";
-import footerStillImg from "../assets/footer/still-life.jpg";
-import sunsetHero from "../assets/sunset_hero.jpg";
-import priyaImg from "../assets/transformations/priya.jpg";
-import rahulImg from "../assets/transformations/rahul.jpg";
-import ananyaImg from "../assets/transformations/ananya.jpg";
+import { api } from "../api/client";
 
 const FILTERS = [
   "All",
@@ -30,27 +16,6 @@ const FILTERS = [
 
 const INITIAL_COUNT = 9;
 const LOAD_MORE_COUNT = 6;
-
-const GALLERY_ITEMS = [
-  { id: 1, src: retreatImg, alt: "Meditation by the lake at sunrise", category: "Meditation", tall: true },
-  { id: 2, src: crystalsImg, alt: "Crystal healing workshop still life", category: "Workshops" },
-  { id: 3, src: spiritualityImg, alt: "Zen stones and candle", category: "Teachings" },
-  { id: 4, src: sunsetHero, alt: "Sunset meditation moment", category: "Events", tall: true },
-  { id: 5, src: healingImg, alt: "Journal and healing crystal", category: "Teachings" },
-  { id: 6, src: candleImg, alt: "Sacred candle and still life", category: "Nature" },
-  { id: 7, src: numerologyImg, alt: "Astro numerology workshop desk", category: "Workshops" },
-  { id: 8, src: meditationImg, alt: "Mountain meditation silhouette", category: "Retreats", tall: true },
-  { id: 9, src: leavesImg, alt: "Green leaves in soft light", category: "Nature" },
-  { id: 10, src: priyaImg, alt: "Community member portrait", category: "Community" },
-  { id: 11, src: stillLifeImg, alt: "Vase and candle still life", category: "Events" },
-  { id: 12, src: rahulImg, alt: "Retreat participant portrait", category: "Retreats" },
-  { id: 13, src: candleVaseImg, alt: "Candle and dried flowers", category: "Nature" },
-  { id: 14, src: ananyaImg, alt: "Community gathering portrait", category: "Community" },
-  { id: 15, src: footerStillImg, alt: "Stone, candle and leaves", category: "Meditation" },
-  { id: 16, src: retreatImg, alt: "Inner peace retreat lakeside", category: "Retreats" },
-  { id: 17, src: crystalsImg, alt: "Workshop crystal arrangement", category: "Events" },
-  { id: 18, src: meditationImg, alt: "Morning meditation practice", category: "Meditation" },
-];
 
 function Sparkle({ className = "h-3 w-3" }) {
   return (
@@ -164,14 +129,39 @@ export default function GalleryPage() {
   const [filter, setFilter] = useState("All");
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
   const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    let cancelled = false;
+    (async () => {
+      try {
+        const data = await api("/api/gallery");
+        if (cancelled) return;
+        setItems(
+          (data || []).map((item) => ({
+            id: item.id,
+            src: item.src || item.thumb || item.url,
+            alt: item.alt || "",
+            category: item.category || "Events",
+            tall: !!item.tall,
+          })),
+        );
+      } catch {
+        if (!cancelled) setItems([]);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const filtered = useMemo(
-    () => (filter === "All" ? GALLERY_ITEMS : GALLERY_ITEMS.filter((item) => item.category === filter)),
-    [filter],
+    () => (filter === "All" ? items : items.filter((item) => item.category === filter)),
+    [filter, items],
   );
 
   const visible = filtered.slice(0, visibleCount);
@@ -280,7 +270,14 @@ export default function GalleryPage() {
             })}
           </div>
 
-          {visible.length === 0 ? (
+          {loading ? (
+            <p
+              className="py-16 text-center text-[15px] text-[#5C5348]"
+              style={{ fontFamily: "'Lora', serif" }}
+            >
+              Loading gallery…
+            </p>
+          ) : visible.length === 0 ? (
             <p
               className="py-16 text-center text-[15px] text-[#5C5348]"
               style={{ fontFamily: "'Lora', serif" }}

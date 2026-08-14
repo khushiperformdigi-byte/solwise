@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import crystalsImg from "../assets/workshops/crystals.jpg";
 import meditationImg from "../assets/workshops/meditation.jpg";
 import numerologyImg from "../assets/workshops/numerology.jpg";
+import { api } from "../api/client";
+import EventsCalendar from "./EventsCalendar";
 
-const events = [
+const FALLBACK_EVENTS = [
   {
     image: crystalsImg,
     alt: "Amethyst crystals and a lit candle",
@@ -41,6 +45,22 @@ const events = [
   },
 ];
 
+function mapApiEvent(ev) {
+  return {
+    image: ev.image || crystalsImg,
+    alt: ev.title,
+    badge: ev.category,
+    day: ev.day,
+    month: ev.month,
+    year: ev.year,
+    title: ev.title,
+    description: ev.description,
+    time: ev.time,
+    location: ev.location,
+    slug: ev.slug,
+  };
+}
+
 function LotusIcon({ className = "h-8 w-8" }) {
   return (
     <svg viewBox="0 0 64 64" aria-hidden className={className} fill="none" stroke="currentColor" strokeWidth="1.35" strokeLinejoin="round">
@@ -61,23 +81,6 @@ function Sparkle({ className = "h-3 w-3" }) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden className={className} fill="currentColor">
       <path d="M12 0c.6 5.4 2.4 8.6 12 12-9.6 3.4-11.4 6.6-12 12-.6-5.4-2.4-8.6-12-12C9.6 8.6 11.4 5.4 12 0Z" />
-    </svg>
-  );
-}
-
-function BotanicalLeaf({ className = "" }) {
-  return (
-    <svg viewBox="0 0 280 360" aria-hidden className={className} fill="none">
-      <g stroke="#C9B48A" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M42 28c28 48 38 108 34 178" />
-        <path d="M58 62c22-18 48-22 72-14-18 22-42 34-72 28Z" fill="#D8C6A0" fillOpacity="0.35" />
-        <path d="M64 108c26-14 54-12 78 2-20 24-48 32-78 22Z" fill="#D8C6A0" fillOpacity="0.28" />
-        <path d="M70 154c24-12 52-8 74 10-22 22-50 28-74 16Z" fill="#D8C6A0" fillOpacity="0.32" />
-        <path d="M72 202c22-10 48-4 68 14-20 20-46 24-68 12Z" fill="#D8C6A0" fillOpacity="0.26" />
-        <path d="M48 86c-20-10-40-8-58 6 16 18 36 24 58 14Z" fill="#D8C6A0" fillOpacity="0.22" />
-        <path d="M52 138c-18-8-38-4-54 12 14 16 34 20 54 10Z" fill="#D8C6A0" fillOpacity="0.2" />
-        <path d="M76 246c18-8 40 0 56 16-16 16-38 18-56 8Z" fill="#D8C6A0" fillOpacity="0.22" />
-      </g>
     </svg>
   );
 }
@@ -162,32 +165,55 @@ function EventCard({ event }) {
           className="mb-3 mt-auto flex flex-wrap items-center gap-x-3.5 gap-y-1.5 text-[10.5px] text-[#5C5348]"
           style={{ fontFamily: "'Lato', sans-serif" }}
         >
-          <span className="inline-flex items-center gap-1.5">
-            <ClockIcon className="h-3.5 w-3.5 text-[#B08A3A]" />
-            {event.time}
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <PinIcon className="h-3.5 w-3.5 text-[#B08A3A]" />
-            {event.location}
-          </span>
+          {event.time && (
+            <span className="inline-flex items-center gap-1.5">
+              <ClockIcon className="h-3.5 w-3.5 text-[#B08A3A]" />
+              {event.time}
+            </span>
+          )}
+          {event.location && (
+            <span className="inline-flex items-center gap-1.5">
+              <PinIcon className="h-3.5 w-3.5 text-[#B08A3A]" />
+              {event.location}
+            </span>
+          )}
         </div>
 
-        <a
-          href="#event"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#123A1A] hover:bg-[#0d2a13] px-3.5 py-2 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-[#C4A15A] border border-[#C4A15A]/40 transition-all duration-300"
+        <Link
+          to="/events"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-[#C4A15A]/40 bg-[#123A1A] px-3.5 py-2 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-[#C4A15A] transition-all duration-300 hover:bg-[#0d2a13]"
           style={{ fontFamily: "'Lato', sans-serif" }}
         >
           Learn More
           <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 text-[#C4A15A]" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
-        </a>
+        </Link>
       </div>
     </article>
   );
 }
 
 export default function WorkshopsRetreats() {
+  const [events, setEvents] = useState(FALLBACK_EVENTS);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const data = await api("/api/events?upcoming=true&limit=3");
+        if (!cancelled && data?.length) {
+          setEvents(data.map(mapApiEvent));
+        }
+      } catch {
+        /* keep fallback */
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <section
       id="events"
@@ -198,7 +224,6 @@ export default function WorkshopsRetreats() {
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-8">
         <header className="mb-5 flex flex-col items-center text-center md:mb-7">
-          
           <div className="mb-2 flex items-center justify-center gap-3">
             <span className="h-px w-10 bg-[#C4A15A]/70 sm:w-14" />
             <span
@@ -227,15 +252,38 @@ export default function WorkshopsRetreats() {
           </p>
         </header>
 
-        <div className="mb-6 grid grid-cols-1 gap-6 sm:mb-8 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
+        <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
           {events.map((event, index) => (
             <div
-              key={event.title}
+              key={event.title + index}
               className={index === 2 ? "md:col-span-2 md:mx-auto md:max-w-[calc(50%-0.875rem)] lg:col-span-1 lg:max-w-none" : ""}
             >
               <EventCard event={event} />
             </div>
           ))}
+        </div>
+
+        <div id="all-events" className="mb-8">
+          <div className="mb-5 flex flex-col items-center text-center">
+            <div className="mb-2 flex items-center justify-center gap-3">
+              <span className="h-px w-10 bg-[#C4A15A]/70 sm:w-14" />
+              <span
+                className="text-[11px] font-medium uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[12px]"
+                style={{ fontFamily: "'Lato', sans-serif" }}
+              >
+                Events Calendar
+              </span>
+              <span className="h-px w-10 bg-[#C4A15A]/70 sm:w-14" />
+            </div>
+            <h3
+              className="engrave-green text-[28px] sm:text-[34px]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Browse by Date
+            </h3>
+          </div>
+
+          <EventsCalendar />
         </div>
 
         <div className="flex flex-col items-center justify-center gap-5 text-center md:flex-row md:gap-8">
@@ -254,16 +302,16 @@ export default function WorkshopsRetreats() {
 
           <span className="hidden h-10 w-px bg-[#C4A15A]/70 md:block" />
 
-          <a
-            href="#all-events"
-            className="inline-flex items-center gap-2 rounded-full border border-[#C4A15A]/70 bg-[#123A1A] hover:bg-[#0d2a13] px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C4A15A] transition-all duration-300 hover:scale-[1.03] sm:px-7 sm:text-[12px]"
+          <Link
+            to="/events"
+            className="inline-flex items-center gap-2 rounded-full border border-[#C4A15A]/70 bg-[#123A1A] px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C4A15A] transition-all duration-300 hover:scale-[1.03] hover:bg-[#0d2a13] sm:px-7 sm:text-[12px]"
             style={{ fontFamily: "'Lato', sans-serif" }}
           >
             View All Events
             <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 text-[#C4A15A]" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

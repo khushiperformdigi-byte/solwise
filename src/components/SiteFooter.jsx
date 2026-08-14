@@ -8,7 +8,7 @@ const exploreLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/#about" },
   { label: "Services", href: "/#programs" },
-  { label: "Workshops & Retreats", href: "/#events" },
+  { label: "Workshops & Retreats", href: "/events" },
   { label: "Meditation", href: "/#programs" },
   { label: "Wisdom & Teachings", href: "/blog" },
   { label: "Blog", href: "/blog" },
@@ -22,7 +22,7 @@ const serviceLinks = [
   { label: "Healing Sessions", href: "/#programs" },
   { label: "Wellness Programs", href: "/#programs" },
   { label: "Corporate Wellness", href: "/#programs" },
-  { label: "Online Courses", href: "/#events" },
+  { label: "Online Courses", href: "/events" },
 ];
 
 const resourceLinks = [
@@ -32,7 +32,7 @@ const resourceLinks = [
   { label: "Free Resources", href: "/blog" },
   { label: "FAQs", href: "/#faq" },
   { label: "Community", href: "/#transformations" },
-  { label: "Events", href: "/#events" },
+  { label: "Events", href: "/events" },
 ];
 
 function LotusIcon({ className = "h-8 w-8" }) {

@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Secrets & local data
+.env
+.env.*
+!.env.example
+backend/server/data/*.json
+!backend/server/data/.gitkeep
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,3 +29,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Deploy artifacts (lock Vite file watcher on Windows)
+backend.zip

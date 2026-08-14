@@ -1,14 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import SiteFooter from "../components/SiteFooter";
 import { useBookingModal } from "../context/BookingModalContext";
-import {
-  getAdjacentPosts,
-  getCategoryCounts,
-  getPostBySlug,
-  getRelatedPosts,
-} from "../data/blogPosts.js";
+import { api } from "../api/client";
+import BlogComments from "../components/BlogComments";
 
 function LotusIcon({ className = "h-8 w-8" }) {
   return (
@@ -164,20 +160,73 @@ export default function BlogDetailPage() {
   const navigate = useNavigate();
   const { openBooking } = useBookingModal();
   const [query, setQuery] = useState("");
-  const post = getPostBySlug(slug);
-  const related = getRelatedPosts(slug);
-  const { prev, next } = getAdjacentPosts(slug);
-  const categories = getCategoryCounts();
+  const [post, setPost] = useState(null);
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    let cancelled = false;
+    (async () => {
+      setLoading(true);
+      setNotFound(false);
+      try {
+        const [detail, list] = await Promise.all([
+          api(`/api/blogs/slug/${slug}`),
+          api("/api/blogs").catch(() => []),
+        ]);
+        if (cancelled) return;
+        setPost(detail);
+        setPosts(Array.isArray(list) ? list : []);
+      } catch {
+        if (!cancelled) setNotFound(true);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
   }, [slug]);
 
-  if (!post) return <Navigate to="/blog" replace />;
+  const related = useMemo(() => {
+    if (!post) return [];
+    return posts.filter((p) => p.slug !== post.slug && p.category === post.category).slice(0, 3);
+  }, [posts, post]);
+
+  const categories = useMemo(() => {
+    const map = {};
+    for (const p of posts) {
+      if (!p.category) continue;
+      map[p.category] = (map[p.category] || 0) + 1;
+    }
+    return Object.entries(map).map(([name, count]) => ({ name, count }));
+  }, [posts]);
+
+  const { prev, next } = useMemo(() => {
+    const index = posts.findIndex((p) => p.slug === slug);
+    return {
+      prev: index > 0 ? posts[index - 1] : null,
+      next: index >= 0 && index < posts.length - 1 ? posts[index + 1] : null,
+    };
+  }, [posts, slug]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-[#F7F4EE] flex flex-col">
+        <Navbar />
+        <p className="mx-auto max-w-6xl flex-1 px-5 py-20 text-[#7A7266]">Loading article…</p>
+        <SiteFooter />
+      </div>
+    );
+  }
+
+  if (notFound || !post) return <Navigate to="/blog" replace />;
 
   const shareUrl = typeof window !== "undefined" ? window.location.href : "";
-  const drop = post.intro.trim()[0] || "A";
-  const restIntro = post.intro.trim().slice(1);
+  const html = post.content || "";
+  const faqJson = (post.faqs || []).filter((f) => f.question && f.answer);
 
   function handleSearch(e) {
     e.preventDefault();
@@ -235,107 +284,56 @@ export default function BlogDetailPage() {
               </span>
             </div>
 
-            <img
-              src={post.image}
-              alt=""
-              className="mb-8 h-[240px] w-full rounded-[18px] object-cover sm:h-[320px] md:h-[380px]"
-            />
+            {post.image && (
+              <img
+                src={post.image}
+                alt=""
+                className="mb-8 h-[240px] w-full rounded-[18px] object-cover sm:h-[320px] md:h-[380px]"
+              />
+            )}
 
-            <div className="max-w-none text-[#3A342C]">
-              <p
-                className="mb-6 text-[16px] leading-[1.85]"
-                style={{ fontFamily: "'Lora', serif" }}
-              >
-                <span
-                  className="engrave-green float-left mr-2.5 -mt-1 text-[58px] leading-[0.85] font-semibold"
+            <div className="blog-content" dangerouslySetInnerHTML={{ __html: html }} />
+
+            {faqJson.length > 0 && (
+              <div className="mt-10">
+                <Divider />
+                <h2
+                  className="engrave-green mb-4 text-[24px] font-semibold"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  {drop}
-                </span>
-                {restIntro}
-              </p>
-
-              {post.sections.map((section) => (
-                <div key={section.heading}>
-                  <Divider />
-                  <h2
-                    className="engrave-green mb-3 text-[24px] leading-snug font-semibold sm:text-[26px]"
-                    style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                  >
-                    {section.heading}
-                  </h2>
-                  {section.paragraphs?.map((paragraph) => (
-                    <p
-                      key={paragraph}
-                      className="mb-4 text-[15.5px] leading-[1.85]"
-                      style={{ fontFamily: "'Lora', serif" }}
-                    >
-                      {paragraph}
-                    </p>
+                  Frequently Asked Questions
+                </h2>
+                <div className="space-y-4">
+                  {faqJson.map((faq) => (
+                    <div key={faq.question} className="rounded-xl bg-white p-4 ring-1 ring-[#E8DCC8]">
+                      <h3
+                        className="mb-2 text-[16px] font-semibold text-[#1A3A28]"
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                      >
+                        {faq.question}
+                      </h3>
+                      <p className="text-[14.5px] leading-relaxed text-[#3A342C]" style={{ fontFamily: "'Lora', serif" }}>
+                        {faq.answer}
+                      </p>
+                    </div>
                   ))}
-                  {section.bullets && (
-                    <ul className="mb-2 space-y-2.5">
-                      {section.bullets.map((item) => (
-                        <li key={item} className="flex items-start gap-3">
-                          <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E8F0EA] text-[#1A3A28]">
-                            <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
-                              <path d="M5 12.5 9.2 17 19 7" />
-                            </svg>
-                          </span>
-                          <span className="text-[15px] leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>
-                            {item}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  {section.steps && (
-                    <ol className="mb-2 space-y-3">
-                      {section.steps.map((item, stepIndex) => (
-                        <li key={item} className="flex items-start gap-3">
-                          <span
-                            className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#1A3A28] text-[11px] font-semibold text-white"
-                            style={{ fontFamily: "'Lato', sans-serif" }}
-                          >
-                            {stepIndex + 1}
-                          </span>
-                          <span className="text-[15px] leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>
-                            {item}
-                          </span>
-                        </li>
-                      ))}
-                    </ol>
-                  )}
                 </div>
-              ))}
-
-              {post.quote && (
-                <>
-                  <Divider />
-                  <blockquote className="relative rounded-[16px] bg-[#F0ECE4] px-6 py-6 sm:px-8">
-                    <span
-                      className="engrave-green absolute -top-2 left-5 text-[54px] leading-none"
-                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                      aria-hidden
-                    >
-                      “
-                    </span>
-                    <p
-                      className="pt-4 text-[17px] leading-relaxed italic text-[#2C261E]"
-                      style={{ fontFamily: "'Lora', serif" }}
-                    >
-                      {post.quote.text}
-                    </p>
-                    <footer
-                      className="mt-3 text-[13px] text-[#7A7266]"
-                      style={{ fontFamily: "'Lato', sans-serif" }}
-                    >
-                      {post.quote.attribution}
-                    </footer>
-                  </blockquote>
-                </>
-              )}
-            </div>
+                <script
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                      "@context": "https://schema.org",
+                      "@type": "FAQPage",
+                      mainEntity: faqJson.map((faq) => ({
+                        "@type": "Question",
+                        name: faq.question,
+                        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+                      })),
+                    }),
+                  }}
+                />
+              </div>
+            )}
 
             <div className="mt-10 flex flex-col gap-5 border-t border-[#E5D9C4] pt-6 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex flex-wrap items-center gap-2.5">
@@ -382,6 +380,8 @@ export default function BlogDetailPage() {
                 <span />
               )}
             </div>
+
+            <BlogComments post={post} />
           </article>
 
           <aside className="space-y-5 lg:col-span-4">

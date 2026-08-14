@@ -241,3 +241,91 @@ h3.engrave-gold {
     drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.55))
     drop-shadow(0 1px 0 rgba(255, 230, 170, 0.22));
 }
+
+.admin-main h1,
+.admin-main h2 {
+  margin: 0;
+  letter-spacing: normal;
+  font-size: unset;
+}
+
+.admin-main h1.engrave-green,
+.admin-main h2.engrave-green {
+  display: block;
+  padding-left: 2px;
+  overflow: visible;
+}
+
+.admin-login h1,
+.admin-login .admin-login-title {
+  margin: 0 0 1.5rem;
+  padding: 1rem 0.5rem 0;
+  letter-spacing: normal;
+  font-size: 34px;
+  line-height: 1.25;
+}
+
+.admin-login h1.engrave-green,
+.admin-login .admin-login-title.engrave-green {
+  display: block;
+  overflow: visible;
+  line-height: 1.25;
+}
+
+.blog-content {
+  color: #3A342C;
+  font-family: "Lora", serif;
+  font-size: 15.5px;
+  line-height: 1.85;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3 {
+  font-family: "Cormorant Garamond", serif;
+  color: #1A3A28;
+  font-weight: 600;
+  margin: 1.4em 0 0.5em;
+  line-height: 1.25;
+}
+
+.blog-content h2 { font-size: 26px; }
+.blog-content h3 { font-size: 22px; }
+
+.blog-content p { margin: 0 0 1em; }
+
+.blog-content ul,
+.blog-content ol {
+  margin: 0 0 1em 1.2em;
+}
+
+.blog-content li { margin: 0.35em 0; }
+
+.blog-content a { color: #8C6621; text-decoration: underline; }
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  margin: 1em 0;
+}
+
+.blog-content blockquote {
+  margin: 1.2em 0;
+  padding: 1em 1.2em;
+  background: #F0ECE4;
+  border-radius: 16px;
+  font-style: italic;
+}
+
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+.blog-content td,
+.blog-content th {
+  border: 1px solid #E5D9C4;
+  padding: 8px;
+}

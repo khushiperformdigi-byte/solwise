@@ -2,10 +2,10 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import SiteFooter from "../components/SiteFooter";
-import { BLOG_CATEGORIES, BLOG_POSTS } from "../data/blogPosts.js";
+import { api } from "../api/client";
+import { BLOG_CATEGORIES } from "../data/blogPosts.js";
 
-const CATEGORIES = ["All Articles", ...BLOG_CATEGORIES];
-const POSTS = BLOG_POSTS;
+const FALLBACK_CATEGORIES = ["All Articles", ...BLOG_CATEGORIES];
 
 const PER_PAGE = 6;
 
@@ -22,23 +22,49 @@ export default function BlogPage() {
   const [category, setCategory] = useState("All Articles");
   const [query, setQuery] = useState(searchParams.get("q") || "");
   const [page, setPage] = useState(1);
+  const [posts, setPosts] = useState([]);
+  const [categories, setCategories] = useState(FALLBACK_CATEGORIES);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const [list, cats] = await Promise.all([
+          api("/api/blogs"),
+          api("/api/blogs/meta/categories").catch(() => []),
+        ]);
+        if (cancelled) return;
+        setPosts(Array.isArray(list) ? list : []);
+        const names = (cats || []).map((c) => c.name).filter(Boolean);
+        setCategories(["All Articles", ...new Set([...names, ...BLOG_CATEGORIES])]);
+      } catch {
+        if (!cancelled) setPosts([]);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return POSTS.filter((post) => {
+    return posts.filter((post) => {
       const matchesCategory = category === "All Articles" || post.category === category;
       const matchesQuery =
         !q ||
         post.title.toLowerCase().includes(q) ||
-        post.excerpt.toLowerCase().includes(q) ||
-        post.category.toLowerCase().includes(q);
+        (post.excerpt || "").toLowerCase().includes(q) ||
+        (post.category || "").toLowerCase().includes(q);
       return matchesCategory && matchesQuery;
     });
-  }, [category, query]);
+  }, [posts, category, query]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
   const currentPage = Math.min(page, totalPages);
@@ -118,7 +144,7 @@ export default function BlogPage() {
         <section className="border-b border-[#E8DCC8]/80 bg-white">
           <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-5 sm:px-8 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex flex-wrap gap-2">
-              {CATEGORIES.map((item) => {
+              {categories.map((item) => {
                 const active = item === category;
                 return (
                   <button
@@ -158,7 +184,14 @@ export default function BlogPage() {
 
         {/* Article grid */}
         <section className="mx-auto w-full max-w-6xl px-5 py-10 sm:px-8 md:py-14">
-          {visible.length === 0 ? (
+          {loading ? (
+            <p
+              className="py-16 text-center text-[16px] text-[#5C5348]"
+              style={{ fontFamily: "'Lora', serif" }}
+            >
+              Loading articles…
+            </p>
+          ) : visible.length === 0 ? (
             <p
               className="py-16 text-center text-[16px] text-[#5C5348]"
               style={{ fontFamily: "'Lora', serif" }}
