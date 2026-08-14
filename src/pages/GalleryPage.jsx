@@ -124,19 +124,19 @@ function Lightbox({ items, index, onClose, onPrev, onNext }) {
         <div className="mt-4 flex flex-col items-center gap-1 text-center">
           <span
             className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#E8D9B8]"
-            style={{ fontFamily: "'Lato', sans-serif" }}
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             {item.category}
           </span>
           <p
-            className="max-w-lg text-[14px] text-white/85"
-            style={{ fontFamily: "'Lora', serif" }}
+            className="max-w-lg text-[16px] text-white/85 font-normal"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             {item.alt}
           </p>
           <p
-            className="text-[12px] text-white/50"
-            style={{ fontFamily: "'Lato', sans-serif" }}
+            className="text-[11px] text-white/50 font-medium"
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             {index + 1} / {items.length}
           </p>
@@ -231,8 +231,8 @@ export default function GalleryPage() {
                   <path d="M32 22c-9.5.6-16.8 7.8-15.2 18.4 5.2-2.2 9.8-5.8 15.2-12.6 5.4 6.8 10 10.4 15.2 12.6C48.8 29.8 41.5 22.6 32 22Z" />
                 </svg>
                 <span
-                  className="text-[11px] font-medium uppercase tracking-[0.28em]"
-                  style={{ fontFamily: "'Lato', sans-serif" }}
+                  className="text-[11px] font-semibold uppercase tracking-[0.28em]"
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
                   Our Gallery
                 </span>
@@ -249,8 +249,8 @@ export default function GalleryPage() {
                 <span className="h-px flex-1 bg-[#C4A15A]/80" />
               </div>
               <p
-                className="max-w-[240px] text-[12.5px] leading-relaxed text-[#5C5348]"
-                style={{ fontFamily: "'Lora', serif" }}
+                className="max-w-[240px] text-[15px] leading-relaxed text-[#5C5348] font-normal"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 Explore beautiful moments from our programs, retreats, and gatherings that celebrate healing, growth, and mindfulness.
               </p>
@@ -267,12 +267,12 @@ export default function GalleryPage() {
                   key={item}
                   type="button"
                   onClick={() => changeFilter(item)}
-                  className={`rounded-full px-4 py-2 text-[12px] font-medium transition-all sm:px-5 ${
+                  className={`rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] transition-all sm:px-5 ${
                     active
                       ? "bg-[#1A3A28] text-white shadow-sm"
                       : "border border-[#E2D6C2] bg-white text-[#3A342C] hover:border-[#C4A15A] hover:text-[#1A3A28]"
                   }`}
-                  style={{ fontFamily: "'Lato', sans-serif" }}
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
                   {item}
                 </button>
@@ -282,8 +282,8 @@ export default function GalleryPage() {
 
           {visible.length === 0 ? (
             <p
-              className="py-16 text-center text-[15px] text-[#5C5348]"
-              style={{ fontFamily: "'Lora', serif" }}
+              className="py-16 text-center text-[17px] text-[#5C5348] font-normal"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               No images in this category yet.
             </p>
@@ -307,7 +307,7 @@ export default function GalleryPage() {
                     <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <span
                       className="pointer-events-none absolute bottom-3 left-3 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#1A3A28] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                      style={{ fontFamily: "'Lato', sans-serif" }}
+                      style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
                       {item.category}
                     </span>
@@ -322,10 +322,10 @@ export default function GalleryPage() {
               <button
                 type="button"
                 onClick={() => setVisibleCount((count) => count + LOAD_MORE_COUNT)}
-                className="inline-flex items-center gap-2.5 rounded-full bg-[#1A3A28] px-7 py-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_-12px_rgba(18,58,26,0.5)] transition-all hover:bg-[#123A1A] hover:scale-[1.02]"
-                style={{ fontFamily: "'Lato', sans-serif" }}
+                className="inline-flex items-center gap-2.5 rounded-full bg-[#123A1A] hover:bg-[#0d2a13] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C4A15A] border border-[#C4A15A]/70 shadow-[0_10px_24px_-12px_rgba(18,58,26,0.5)] transition-all hover:scale-[1.02]"
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
-                <svg viewBox="0 0 24 24" className="h-4 w-4 animate-spin" style={{ animationDuration: "2.4s" }} fill="none" stroke="currentColor" strokeWidth="1.8">
+                <svg viewBox="0 0 24 24" className="h-4 w-4 animate-spin text-[#C4A15A]" style={{ animationDuration: "2.4s" }} fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M12 4a8 8 0 1 1-7.2 4.4" strokeLinecap="round" />
                 </svg>
                 Load More

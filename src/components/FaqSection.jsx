@@ -133,7 +133,7 @@ function FaqItem({ item, open, onToggle }) {
         <span className="min-w-0 flex-1 pt-1.5">
           <span className="flex items-start justify-between gap-3">
             <span
-              className="engrave-green text-[16px] leading-snug font-medium sm:text-[18px]"
+              className="engrave-green text-[18px] leading-snug font-semibold sm:text-[20px]"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               {item.question}
@@ -157,8 +157,8 @@ function FaqItem({ item, open, onToggle }) {
           >
             <span className="overflow-hidden">
               <span
-                className="mt-3 block text-[13.5px] leading-relaxed font-light text-[#6B6358] sm:text-[14.5px]"
-                style={{ fontFamily: "'Lora', serif" }}
+                className="mt-3 block text-[15.5px] leading-relaxed font-normal text-[#6B6358] sm:text-[16.5px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 {item.answer}
               </span>
@@ -186,8 +186,8 @@ export default function FaqSection() {
           <div className="mb-2 flex items-center justify-center gap-3">
             <span className="h-px w-10 bg-[#C4A15A]/70 sm:w-14" />
             <span
-              className="text-[11px] font-medium uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[12px]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[12px]"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               FAQ
             </span>
@@ -208,8 +208,8 @@ export default function FaqSection() {
           </div>
 
           <p
-            className="max-w-xl text-[13.5px] leading-relaxed font-light text-[#5C5348] sm:text-[14.5px]"
-            style={{ fontFamily: "'Lora', serif" }}
+            className="max-w-xl text-[16px] leading-relaxed font-normal text-[#5C5348] sm:text-[17.5px]"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Everything you need to know to begin your journey with clarity and confidence.
           </p>
@@ -232,8 +232,8 @@ export default function FaqSection() {
               <Sparkle className="h-3.5 w-3.5" />
             </span>
             <p
-              className="text-[13.5px] text-[#2C261E] sm:text-[14.5px]"
-              style={{ fontFamily: "'Lora', serif" }}
+              className="text-[15.5px] text-[#2C261E] sm:text-[16.5px] font-normal"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Still have questions? I&apos;m here to help.
             </p>
@@ -244,7 +244,7 @@ export default function FaqSection() {
           <a
             href="#contact"
             className="inline-flex items-center gap-2 rounded-full border border-[#C4A15A]/70 bg-[#123A1A] hover:bg-[#0d2a13] px-5 py-2 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-[#C4A15A] transition-all duration-300 hover:scale-[1.03] sm:px-6 sm:text-[11.5px]"
-            style={{ fontFamily: "'Lato', sans-serif" }}
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             <ChatIcon className="h-4 w-4 text-[#C4A15A]" />
             Contact Me

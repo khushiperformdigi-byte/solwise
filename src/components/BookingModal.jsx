@@ -133,7 +133,7 @@ function Field({ label, icon, children }) {
     <label className="block">
       <span
         className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.12em] text-[#3A342C]"
-        style={{ fontFamily: "'Lato', sans-serif" }}
+        style={{ fontFamily: "'Montserrat', sans-serif" }}
       >
         {label}
       </span>
@@ -150,7 +150,7 @@ function Field({ label, icon, children }) {
 }
 
 const inputClass =
-  "w-full rounded-md border border-[#E2D6C2] bg-[#FFFcf8] px-3 py-2 pr-9 text-[13px] text-[#2C261E] outline-none transition-colors placeholder:text-[#A39888] focus:border-[#C4A15A] focus:ring-2 focus:ring-[#C4A15A]/20";
+  "w-full rounded-md border border-[#E2D6C2] bg-[#FFFcf8] px-3 py-2 pr-9 text-[15px] text-[#2C261E] outline-none transition-colors placeholder:text-[#A39888] focus:border-[#C4A15A] focus:ring-2 focus:ring-[#C4A15A]/20";
 
 function ThankYouView({ onClose }) {
   return (
@@ -172,14 +172,14 @@ function ThankYouView({ onClose }) {
         <span className="h-px flex-1 bg-[#C4A15A]/80" />
       </div>
       <p
-        className="mb-1.5 max-w-md text-[15px] leading-relaxed text-[#1A3A28]"
+        className="mb-1.5 max-w-md text-[17px] leading-relaxed text-[#1A3A28] font-normal"
         style={{ fontFamily: "'Cormorant Garamond', serif" }}
       >
         Your session request has been received.
       </p>
       <p
-        className="mb-6 max-w-sm text-[13px] leading-relaxed text-[#5C5348]"
-        style={{ fontFamily: "'Lora', serif" }}
+        className="mb-6 max-w-sm text-[15px] leading-relaxed text-[#5C5348] font-normal"
+        style={{ fontFamily: "'Cormorant Garamond', serif" }}
       >
         I’ll review your details and get back to you soon to confirm your booking. Until then, take a gentle breath — your journey has already begun.
       </p>
@@ -187,7 +187,7 @@ function ThankYouView({ onClose }) {
         type="button"
         onClick={onClose}
         className="inline-flex items-center gap-2 rounded-full bg-[#1A3A28] px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#F7F1E4] transition-all hover:bg-[#123A1A]"
-        style={{ fontFamily: "'Lato', sans-serif" }}
+        style={{ fontFamily: "'Montserrat', sans-serif" }}
       >
         Close
       </button>
@@ -300,8 +300,8 @@ export default function BookingModal() {
                   <span className="h-px flex-1 bg-[#C4A15A]/80" />
                 </div>
                 <p
-                  className="text-[13px] leading-snug text-[#5C5348]"
-                  style={{ fontFamily: "'Lora', serif" }}
+                  className="text-[15px] leading-snug text-[#5C5348] font-normal"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   Fill in the details below and I’ll get back to you soon.
                 </p>
@@ -317,7 +317,7 @@ export default function BookingModal() {
                       onChange={(e) => update("name", e.target.value)}
                       placeholder="Your full name"
                       className={inputClass}
-                      style={{ fontFamily: "'Lora', serif" }}
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     />
                   </Field>
                   <Field label="Email Address" icon="email">
@@ -328,7 +328,7 @@ export default function BookingModal() {
                       onChange={(e) => update("email", e.target.value)}
                       placeholder="you@email.com"
                       className={inputClass}
-                      style={{ fontFamily: "'Lora', serif" }}
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     />
                   </Field>
                   <Field label="Phone Number" icon="phone">
@@ -339,13 +339,13 @@ export default function BookingModal() {
                       onChange={(e) => update("phone", e.target.value)}
                       placeholder="+91 00000 00000"
                       className={inputClass}
-                      style={{ fontFamily: "'Lora', serif" }}
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     />
                   </Field>
                   <label className="block">
                     <span
                       className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.12em] text-[#3A342C]"
-                      style={{ fontFamily: "'Lato', sans-serif" }}
+                      style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
                       Preferred Date
                     </span>
@@ -363,7 +363,7 @@ export default function BookingModal() {
                       value={form.time}
                       onChange={(e) => update("time", e.target.value)}
                       className={`${inputClass} appearance-none`}
-                      style={{ fontFamily: "'Lora', serif" }}
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       <option value="">Select a time</option>
                       {timeSlots.map((slot) => (
@@ -379,7 +379,7 @@ export default function BookingModal() {
                       value={form.sessionType}
                       onChange={(e) => update("sessionType", e.target.value)}
                       className={`${inputClass} appearance-none`}
-                      style={{ fontFamily: "'Lora', serif" }}
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       <option value="">Choose a session</option>
                       {sessionTypes.map((type) => (
@@ -398,7 +398,7 @@ export default function BookingModal() {
                     onChange={(e) => update("message", e.target.value)}
                     placeholder="Share your intention or anything you'd like me to know"
                     className={`${inputClass} resize-none pt-2`}
-                    style={{ fontFamily: "'Lora', serif" }}
+                    style={{ fontFamily: "'Cormorant Garamond', serif" }}
                   />
                 </Field>
 
@@ -408,8 +408,8 @@ export default function BookingModal() {
                       <Icon type="leaf" className="h-3.5 w-3.5" />
                     </span>
                     <p
-                      className="text-[12px] leading-snug text-[#3A342C]"
-                      style={{ fontFamily: "'Lora', serif" }}
+                      className="text-[13.5px] leading-snug text-[#3A342C] font-normal"
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       Not sure which session is right for you? Book a free 15-minute clarity call.
                     </p>
@@ -418,7 +418,7 @@ export default function BookingModal() {
                     type="button"
                     onClick={() => update("sessionType", "Clarity Call (15 min)")}
                     className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-[#1A3A28] bg-transparent px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.12em] text-[#1A3A28] transition-all hover:bg-[#1A3A28] hover:text-[#F7F1E4]"
-                    style={{ fontFamily: "'Lato', sans-serif" }}
+                    style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
                     <Icon type="phone" className="h-3 w-3" />
                     Book a Clarity Call
@@ -428,13 +428,11 @@ export default function BookingModal() {
                 <button
                   type="submit"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#1A3A28] px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#F7F1E4] shadow-[0_8px_20px_-10px_rgba(18,58,26,0.55)] transition-all hover:bg-[#123A1A]"
-                  style={{ fontFamily: "'Lato', sans-serif" }}
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
                   <Icon type="calendar" className="h-3.5 w-3.5 text-[#C4A15A]" />
                   Book My Session
                 </button>
-
-                
               </form>
             </div>
           </div>

@@ -193,8 +193,8 @@ export default function BlogDetailPage() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
           <article className="lg:col-span-8">
             <nav
-              className="mb-5 text-[12px] text-[#8A8174]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              className="mb-5 text-[11px] font-medium uppercase tracking-[0.12em] text-[#8A8174]"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               <Link to="/" className="hover:text-[#1A3A28]">Home</Link>
               <span className="mx-1.5">›</span>
@@ -205,7 +205,7 @@ export default function BlogDetailPage() {
 
             <span
               className="mb-3 inline-flex rounded-full bg-[#E8F0EA] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#1A3A28]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               {post.category}
             </span>
@@ -218,8 +218,8 @@ export default function BlogDetailPage() {
             </h1>
 
             <div
-              className="mb-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-[#6B6358]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              className="mb-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-[#6B6358] font-medium"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               <span className="inline-flex items-center gap-1.5">
                 <MetaIcon type="user" />
@@ -243,8 +243,8 @@ export default function BlogDetailPage() {
 
             <div className="max-w-none text-[#3A342C]">
               <p
-                className="mb-6 text-[16px] leading-[1.85]"
-                style={{ fontFamily: "'Lora', serif" }}
+                className="mb-6 text-[18px] leading-[1.8] font-normal"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 <span
                   className="engrave-green float-left mr-2.5 -mt-1 text-[58px] leading-[0.85] font-semibold"
@@ -267,8 +267,8 @@ export default function BlogDetailPage() {
                   {section.paragraphs?.map((paragraph) => (
                     <p
                       key={paragraph}
-                      className="mb-4 text-[15.5px] leading-[1.85]"
-                      style={{ fontFamily: "'Lora', serif" }}
+                      className="mb-4 text-[17.5px] leading-[1.8] font-normal"
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       {paragraph}
                     </p>
@@ -282,7 +282,7 @@ export default function BlogDetailPage() {
                               <path d="M5 12.5 9.2 17 19 7" />
                             </svg>
                           </span>
-                          <span className="text-[15px] leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>
+                          <span className="text-[17px] leading-relaxed font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                             {item}
                           </span>
                         </li>
@@ -295,11 +295,11 @@ export default function BlogDetailPage() {
                         <li key={item} className="flex items-start gap-3">
                           <span
                             className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#1A3A28] text-[11px] font-semibold text-white"
-                            style={{ fontFamily: "'Lato', sans-serif" }}
+                            style={{ fontFamily: "'Montserrat', sans-serif" }}
                           >
                             {stepIndex + 1}
                           </span>
-                          <span className="text-[15px] leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>
+                          <span className="text-[17px] leading-relaxed font-normal" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                             {item}
                           </span>
                         </li>
@@ -321,14 +321,14 @@ export default function BlogDetailPage() {
                       “
                     </span>
                     <p
-                      className="pt-4 text-[17px] leading-relaxed italic text-[#2C261E]"
-                      style={{ fontFamily: "'Lora', serif" }}
+                      className="pt-4 text-[19px] leading-relaxed italic text-[#2C261E] font-normal"
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       {post.quote.text}
                     </p>
                     <footer
-                      className="mt-3 text-[13px] text-[#7A7266]"
-                      style={{ fontFamily: "'Lato', sans-serif" }}
+                      className="mt-3 text-[12px] text-[#7A7266] font-medium"
+                      style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
                       {post.quote.attribution}
                     </footer>
@@ -340,8 +340,8 @@ export default function BlogDetailPage() {
             <div className="mt-10 flex flex-col gap-5 border-t border-[#E5D9C4] pt-6 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex flex-wrap items-center gap-2.5">
                 <span
-                  className="text-[13px] text-[#5C5348]"
-                  style={{ fontFamily: "'Lato', sans-serif" }}
+                  className="text-[12px] text-[#5C5348] font-medium"
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
                   Share this article:
                 </span>
@@ -356,8 +356,8 @@ export default function BlogDetailPage() {
               {prev ? (
                 <Link
                   to={`/blog/${prev.slug}`}
-                  className="inline-flex items-center gap-2 text-[13px] text-[#1A3A28] transition-colors hover:text-[#B08A3A]"
-                  style={{ fontFamily: "'Lato', sans-serif" }}
+                  className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#1A3A28] transition-colors hover:text-[#B08A3A]"
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
                   <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                     <path d="M15 6l-6 6 6 6" />
@@ -370,8 +370,8 @@ export default function BlogDetailPage() {
               {next ? (
                 <Link
                   to={`/blog/${next.slug}`}
-                  className="inline-flex items-center gap-2 text-[13px] text-[#1A3A28] transition-colors hover:text-[#B08A3A]"
-                  style={{ fontFamily: "'Lato', sans-serif" }}
+                  className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#1A3A28] transition-colors hover:text-[#B08A3A]"
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
                   Next Article
                   <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -391,8 +391,8 @@ export default function BlogDetailPage() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search articles..."
-                className="min-w-0 flex-1 bg-transparent px-4 py-3 text-[13px] text-[#2C261E] outline-none placeholder:text-[#A39888]"
-                style={{ fontFamily: "'Lora', serif" }}
+                className="min-w-0 flex-1 bg-transparent px-4 py-3 text-[14.5px] text-[#2C261E] outline-none placeholder:text-[#A39888]"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
               />
               <button
                 type="submit"
@@ -408,7 +408,7 @@ export default function BlogDetailPage() {
 
             <div className="rounded-[18px] bg-[#F3EDE3] p-5">
               <h3
-                className="engrave-green mb-4 text-[18px] font-semibold"
+                className="engrave-green mb-4 text-[19px] font-semibold"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 About the Author
@@ -421,19 +421,19 @@ export default function BlogDetailPage() {
                 />
                 <div>
                   <p
-                    className="engrave-green text-[16px] font-semibold"
+                    className="engrave-green text-[17px] font-semibold"
                     style={{ fontFamily: "'Cormorant Garamond', serif" }}
                   >
                     Dr. Sachin Bansal
                   </p>
-                  <p className="text-[12px] text-[#7A7266]" style={{ fontFamily: "'Lato', sans-serif" }}>
+                  <p className="text-[11px] text-[#7A7266] font-medium uppercase tracking-[0.14em]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                     The Mystic Guru
                   </p>
                 </div>
               </div>
               <p
-                className="mb-4 text-[13px] leading-relaxed text-[#5C5348]"
-                style={{ fontFamily: "'Lora', serif" }}
+                className="mb-4 text-[14.5px] leading-relaxed text-[#5C5348] font-normal"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 Guiding seekers toward inner clarity, emotional balance and spiritual transformation through ancient wisdom and modern understanding.
               </p>
@@ -447,7 +447,7 @@ export default function BlogDetailPage() {
 
             <div className="rounded-[18px] bg-white p-5 shadow-[0_8px_24px_-14px_rgba(90,68,28,0.14)] ring-1 ring-[#E8DCC8]/80">
               <h3
-                className="engrave-green mb-4 text-[18px] font-semibold"
+                className="engrave-green mb-4 text-[19px] font-semibold"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 Categories
@@ -457,8 +457,8 @@ export default function BlogDetailPage() {
                   <li key={item.name}>
                     <Link
                       to="/blog"
-                      className="flex items-center justify-between gap-3 text-[13.5px] text-[#3A342C] transition-colors hover:text-[#B08A3A]"
-                      style={{ fontFamily: "'Lato', sans-serif" }}
+                      className="flex items-center justify-between gap-3 text-[13px] text-[#3A342C] transition-colors hover:text-[#B08A3A] font-medium"
+                      style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
                       <span className="inline-flex items-center gap-2.5">
                         <span className="text-[#C4A15A]">
@@ -473,8 +473,8 @@ export default function BlogDetailPage() {
               </ul>
               <Link
                 to="/blog"
-                className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-medium text-[#1A3A28] hover:text-[#B08A3A]"
-                style={{ fontFamily: "'Lato', sans-serif" }}
+                className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A3A28] hover:text-[#B08A3A]"
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 View All Categories
                 <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -485,7 +485,7 @@ export default function BlogDetailPage() {
 
             <div className="rounded-[18px] bg-white p-5 shadow-[0_8px_24px_-14px_rgba(90,68,28,0.14)] ring-1 ring-[#E8DCC8]/80">
               <h3
-                className="engrave-green mb-4 text-[18px] font-semibold"
+                className="engrave-green mb-4 text-[19px] font-semibold"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 Related Articles
@@ -502,19 +502,19 @@ export default function BlogDetailPage() {
                       <span className="min-w-0">
                         <span
                           className="mb-1 inline-block rounded bg-[#E8F0EA] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.12em] text-[#1A3A28]"
-                          style={{ fontFamily: "'Lato', sans-serif" }}
+                          style={{ fontFamily: "'Montserrat', sans-serif" }}
                         >
                           {item.category}
                         </span>
                         <span
-                          className="engrave-green mt-1 block text-[14px] leading-snug font-semibold group-hover:opacity-80"
+                          className="engrave-green mt-1 block text-[15px] leading-snug font-semibold group-hover:opacity-80"
                           style={{ fontFamily: "'Cormorant Garamond', serif" }}
                         >
                           {item.title}
                         </span>
                         <span
-                          className="mt-1 block text-[11px] text-[#8A8174]"
-                          style={{ fontFamily: "'Lato', sans-serif" }}
+                          className="mt-1 block text-[11px] text-[#8A8174] font-medium"
+                          style={{ fontFamily: "'Montserrat', sans-serif" }}
                         >
                           {item.date} · {item.readTime}
                         </span>
@@ -541,8 +541,8 @@ export default function BlogDetailPage() {
                 Begin Your Transformation Journey Today
               </h3>
               <p
-                className="relative mb-4 text-[13px] leading-relaxed text-[#5C5348]"
-                style={{ fontFamily: "'Lora', serif" }}
+                className="relative mb-4 text-[14.5px] leading-relaxed text-[#5C5348] font-normal"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 Book a personalized session and take the first step toward clarity, healing and inner peace.
               </p>
@@ -550,7 +550,7 @@ export default function BlogDetailPage() {
                 type="button"
                 onClick={() => openBooking()}
                 className="relative inline-flex items-center gap-2 rounded-full bg-[#1A3A28] px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#F7F1E4] transition-all hover:bg-[#123A1A]"
-                style={{ fontFamily: "'Lato', sans-serif" }}
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 text-[#C4A15A]" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <rect x="3.5" y="5" width="17" height="15.5" rx="2" />

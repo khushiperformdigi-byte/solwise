@@ -163,8 +163,8 @@ export default function ThemedDatePicker({
           placeholder={placeholder}
           onClick={() => setOpen((v) => !v)}
           onFocus={() => setOpen(true)}
-          className={`${inputClassName} cursor-pointer caret-transparent`}
-          style={{ fontFamily: "'Lora', serif" }}
+          className={`${inputClassName} cursor-pointer caret-transparent text-[15px]`}
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
           aria-haspopup="dialog"
           aria-expanded={open}
         />
@@ -198,7 +198,7 @@ export default function ThemedDatePicker({
               </svg>
             </button>
             <p
-              className="engrave-green text-[17px] font-semibold tracking-wide text-[#1A3A28]"
+              className="engrave-green text-[18px] font-semibold tracking-wide text-[#1A3A28]"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               {MONTHS[month]} {year}
@@ -220,7 +220,7 @@ export default function ThemedDatePicker({
               <span
                 key={d}
                 className="py-1 text-center text-[10px] font-semibold uppercase tracking-[0.08em] text-[#C4A15A]"
-                style={{ fontFamily: "'Lato', sans-serif" }}
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 {d}
               </span>
@@ -246,7 +246,7 @@ export default function ThemedDatePicker({
                   disabled={disabled}
                   onClick={() => selectDay(day)}
                   className={[
-                    "flex h-8 items-center justify-center rounded-full text-[12px] transition-colors",
+                    "flex h-8 items-center justify-center rounded-full text-[12px] font-medium transition-colors",
                     disabled
                       ? "cursor-not-allowed text-[#C9C0B2]"
                       : isSelected
@@ -255,7 +255,7 @@ export default function ThemedDatePicker({
                           ? "border border-[#C4A15A] text-[#1A3A28] hover:bg-[#EFE6D6]"
                           : "text-[#3A342C] hover:bg-[#EFE6D6]",
                   ].join(" ")}
-                  style={{ fontFamily: "'Lora', serif" }}
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
                 >
                   {day}
                 </button>
@@ -273,7 +273,7 @@ export default function ThemedDatePicker({
                 setOpen(false);
               }}
               className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#C4A15A] transition-colors hover:text-[#1A3A28]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               Today
             </button>
@@ -284,7 +284,7 @@ export default function ThemedDatePicker({
                 setOpen(false);
               }}
               className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#6B6358] transition-colors hover:text-[#1A3A28]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               Clear
             </button>

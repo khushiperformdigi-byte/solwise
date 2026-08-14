@@ -111,7 +111,7 @@ function EventCard({ event }) {
         />
         <span
           className="absolute left-3 top-3 rounded-full bg-[#1A3A28] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#F7F1E4]"
-          style={{ fontFamily: "'Lato', sans-serif" }}
+          style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
           {event.badge}
         </span>
@@ -128,13 +128,13 @@ function EventCard({ event }) {
             </span>
             <span
               className="mt-1 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-[#1A3A28]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               {event.month}
             </span>
             <span
-              className="mt-0.5 text-[9.5px] text-[#7A7266]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              className="mt-0.5 text-[9.5px] text-[#7A7266] font-medium"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               {event.year}
             </span>
@@ -144,14 +144,14 @@ function EventCard({ event }) {
 
           <div className="min-w-0 flex-1">
             <h3
-              className="engrave-green mb-1.5 text-[17px] leading-snug font-semibold sm:text-[18px]"
+              className="engrave-green mb-1.5 text-[18px] leading-snug font-semibold sm:text-[19px]"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               {event.title}
             </h3>
             <p
-              className="text-[12px] leading-relaxed font-light text-[#5C5348]"
-              style={{ fontFamily: "'Lora', serif" }}
+              className="text-[14px] leading-relaxed font-normal text-[#5C5348]"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               {event.description}
             </p>
@@ -159,8 +159,8 @@ function EventCard({ event }) {
         </div>
 
         <div
-          className="mb-3 mt-auto flex flex-wrap items-center gap-x-3.5 gap-y-1.5 text-[10.5px] text-[#5C5348]"
-          style={{ fontFamily: "'Lato', sans-serif" }}
+          className="mb-3 mt-auto flex flex-wrap items-center gap-x-3.5 gap-y-1.5 text-[10.5px] text-[#5C5348] font-medium"
+          style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
           <span className="inline-flex items-center gap-1.5">
             <ClockIcon className="h-3.5 w-3.5 text-[#B08A3A]" />
@@ -175,7 +175,7 @@ function EventCard({ event }) {
         <a
           href="#event"
           className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#123A1A] hover:bg-[#0d2a13] px-3.5 py-2 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-[#C4A15A] border border-[#C4A15A]/40 transition-all duration-300"
-          style={{ fontFamily: "'Lato', sans-serif" }}
+          style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
           Learn More
           <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 text-[#C4A15A]" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -201,8 +201,8 @@ export default function WorkshopsRetreats() {
           <div className="mb-2 flex items-center justify-center gap-3">
             <span className="h-px w-10 bg-[#C4A15A]/70 sm:w-14" />
             <span
-              className="text-[11px] font-medium uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[12px]"
-              style={{ fontFamily: "'Lato', sans-serif" }}
+              className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#B08A3A] sm:text-[12px]"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               Upcoming Events
             </span>
@@ -219,8 +219,8 @@ export default function WorkshopsRetreats() {
           <Sparkle className="mb-2 h-3 w-3 text-[#C4A15A]" />
 
           <p
-            className="max-w-xl text-[14.5px] leading-relaxed font-light text-[#5C5348] sm:text-[16px]"
-            style={{ fontFamily: "'Lora', serif" }}
+            className="max-w-xl text-[16.5px] leading-relaxed font-normal text-[#5C5348] sm:text-[18px]"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Join transformative experiences designed to help you heal, grow and connect with your inner self.
           </p>
@@ -243,8 +243,8 @@ export default function WorkshopsRetreats() {
               <LotusIcon className="h-5 w-5 text-[#C4A15A]" />
             </span>
             <p
-              className="text-[14px] leading-snug text-[#2C261E] sm:text-[15px]"
-              style={{ fontFamily: "'Lora', serif" }}
+              className="text-[16px] leading-snug text-[#2C261E] sm:text-[17px] font-normal"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               More events coming soon.
               <br className="hidden sm:block" /> Stay connected for updates!
@@ -256,7 +256,7 @@ export default function WorkshopsRetreats() {
           <a
             href="#all-events"
             className="inline-flex items-center gap-2 rounded-full border border-[#C4A15A]/70 bg-[#123A1A] hover:bg-[#0d2a13] px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C4A15A] transition-all duration-300 hover:scale-[1.03] sm:px-7 sm:text-[12px]"
-            style={{ fontFamily: "'Lato', sans-serif" }}
+            style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             View All Events
             <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 text-[#C4A15A]" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
