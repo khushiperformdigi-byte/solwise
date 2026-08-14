@@ -157,7 +157,7 @@ function FaqItem({ item, open, onToggle }) {
           >
             <span className="overflow-hidden">
               <span
-                className="mt-3 block text-[15.5px] leading-relaxed font-normal text-[#6B6358] sm:text-[16.5px]"
+                className="mt-3.5 mb-1 block text-[17.5px] leading-relaxed font-normal text-[#4A4235] sm:text-[18.5px]"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 {item.answer}
@@ -181,7 +181,7 @@ export default function FaqSection() {
     >
 
       <div className="relative z-10 mx-auto w-full max-w-3xl px-5 sm:px-8">
-        <header className="mb-5 flex flex-col items-center text-center md:mb-7">
+        <header className="mb-6 flex flex-col items-center text-center md:mb-8">
           
           <div className="mb-2 flex items-center justify-center gap-3">
             <span className="h-px w-10 bg-[#C4A15A]/70 sm:w-14" />
@@ -201,21 +201,21 @@ export default function FaqSection() {
             Frequently Asked Questions
           </h2>
 
-          <div className="mb-2 flex w-full max-w-[200px] items-center gap-2 text-[#C4A15A]">
+          <div className="mb-3 flex w-full max-w-[200px] items-center gap-2 text-[#C4A15A]">
             <span className="h-px flex-1 bg-[#C4A15A]/80" />
             <Sparkle className="h-3 w-3" />
             <span className="h-px flex-1 bg-[#C4A15A]/80" />
           </div>
 
           <p
-            className="max-w-xl text-[16px] leading-relaxed font-normal text-[#5C5348] sm:text-[17.5px]"
+            className="max-w-xl text-[18.5px] leading-relaxed font-normal text-[#4A4235] sm:text-[20px] md:text-[21px]"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
             Everything you need to know to begin your journey with clarity and confidence.
           </p>
         </header>
 
-        <div className="mb-6 flex flex-col gap-3 sm:mb-8">
+        <div className="mb-8 flex flex-col gap-3.5 sm:mb-10">
           {faqs.map((item) => (
             <FaqItem
               key={item.id}
@@ -226,13 +226,13 @@ export default function FaqSection() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-4 text-center sm:flex-row sm:gap-6">
+        <div className="flex flex-col items-center justify-center gap-4 text-center sm:flex-row sm:gap-6 py-2">
           <div className="flex items-center gap-3">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#C4A15A] text-[#C4A15A]">
-              <Sparkle className="h-3.5 w-3.5" />
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#C4A15A] text-[#C4A15A] shadow-sm">
+              <Sparkle className="h-4 w-4" />
             </span>
             <p
-              className="text-[15.5px] text-[#2C261E] sm:text-[16.5px] font-normal"
+              className="text-[18px] leading-snug text-[#2C261E] sm:text-[19.5px] font-normal"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
               Still have questions? I&apos;m here to help.
@@ -243,7 +243,7 @@ export default function FaqSection() {
 
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-full border border-[#C4A15A]/70 bg-[#123A1A] hover:bg-[#0d2a13] px-5 py-2 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-[#C4A15A] transition-all duration-300 hover:scale-[1.03] sm:px-6 sm:text-[11.5px]"
+            className="inline-flex items-center gap-2 rounded-full border border-[#C4A15A]/70 bg-[#123A1A] hover:bg-[#0d2a13] px-5 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.18em] text-[#C4A15A] transition-all duration-300 hover:scale-[1.03] sm:px-6 sm:text-[11.5px]"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             <ChatIcon className="h-4 w-4 text-[#C4A15A]" />

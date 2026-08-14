@@ -450,20 +450,20 @@ export default function BookSession() {
                     Book My Session
                   </button>
 
-                  <div className="grid grid-cols-1 gap-3 border-t border-[#E8DCC8] pt-4 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-[#E8DCC8]">
+                  <div className="grid grid-cols-1 gap-3 border-t border-[#E8DCC8] pt-5 mt-2 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-[#E8DCC8]">
                     {trustItems.map((item) => (
-                      <div key={item.title} className="flex flex-col items-center px-2 text-center">
-                        <span className="mb-1.5 text-[#C4A15A]">
-                          <Icon type={item.icon} className="h-4 w-4" />
+                      <div key={item.title} className="flex flex-col items-center px-2 text-center py-1">
+                        <span className="mb-2 text-[#C4A15A]">
+                          <Icon type={item.icon} className="h-5 w-5" />
                         </span>
                         <span
-                          className="engrave-green text-[12.5px] font-semibold"
+                          className="engrave-green text-[14px] md:text-[15px] font-semibold"
                           style={{ fontFamily: "'Montserrat', sans-serif" }}
                         >
                           {item.title}
                         </span>
                         <span
-                          className="mt-0.5 text-[13px] text-[#6B6358] font-normal"
+                          className="mt-1 text-[15.5px] md:text-[16.5px] text-[#5C5348] font-normal leading-relaxed"
                           style={{ fontFamily: "'Cormorant Garamond', serif" }}
                         >
                           {item.text}
