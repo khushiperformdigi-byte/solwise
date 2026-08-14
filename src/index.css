@@ -165,6 +165,12 @@ h4,
   -webkit-text-fill-color: transparent;
 }
 
+.group:hover .engrave-green {
+  background-image: none !important;
+  color: #C4A15A !important;
+  -webkit-text-fill-color: #C4A15A !important;
+}
+
 h2.engrave-green,
 h3.engrave-green,
 h4.engrave-green,

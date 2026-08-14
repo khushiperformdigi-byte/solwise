@@ -92,7 +92,7 @@ function ArticleCard({ article }) {
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/18 via-transparent to-transparent" />
         <span
-          className="absolute bottom-3 left-4 rounded-md bg-[#C9A15B] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#1A3328] shadow-[0_4px_10px_rgba(90,68,28,0.18)]"
+          className="absolute bottom-3 left-4 rounded-md bg-[#123A1A] border border-[#C4A15A]/30 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#C4A15A] shadow-[0_4px_10px_rgba(90,68,28,0.18)]"
           style={{ fontFamily: "'Lato', sans-serif" }}
         >
           {article.badge}
@@ -145,10 +145,7 @@ export default function WisdomTeachings() {
       {/* Warm paper wash */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,252,246,0.9)_0%,_rgba(251,246,238,0.4)_55%,_transparent_100%)]" />
 
-      {/* Botanical watermark — top left */}
-      <div className="pointer-events-none absolute -left-8 -top-6 h-64 w-52 opacity-[0.42] sm:h-80 sm:w-64 md:h-[360px] md:w-72">
-        <BotanicalLeaf />
-      </div>
+
 
       {/* Soft sunbeam — top right */}
       <div className="pointer-events-none absolute -right-24 -top-24 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,_rgba(232,196,130,0.38)_0%,_rgba(232,196,130,0.12)_38%,_transparent_68%)] blur-2xl" />
