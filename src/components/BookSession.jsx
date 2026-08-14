@@ -263,15 +263,15 @@ export default function BookSession() {
               Share a few details and I’ll create a space for healing, clarity and inner alignment — at a time that works for you.
             </p>
 
-            <ul className="space-y-9 md:space-y-10">
+            <ul className="flex flex-col gap-8 sm:gap-9 lg:gap-10">
               {features.map((item) => (
-                <li key={item.title} className="flex gap-4 items-start">
+                <li key={item.title} className="flex gap-4.5 items-start mb-2 sm:mb-3 last:mb-0">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F3EAD8] text-[#C4A15A] shadow-sm">
                     <Icon type={item.icon} className={item.icon === "sparkle" ? "h-5 w-5" : "h-5.5 w-5.5"} />
                   </span>
                   <div>
                     <span
-                      className="engrave-green block text-[20px] md:text-[21px] font-semibold mb-0.5"
+                      className="engrave-green block text-[20px] md:text-[21px] font-semibold mb-1"
                       style={{ fontFamily: "'Cormorant Garamond', serif" }}
                     >
                       {item.title}
