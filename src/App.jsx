@@ -396,14 +396,7 @@ function App() {
               
               {/* Card 1 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
-                  <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M50 25 C45 45 35 50 38 65 C43 65 48 55 50 40 C52 55 57 65 62 65 C65 50 55 45 50 25 Z" fill="currentColor" opacity="0.15" />
-                    <circle cx="50" cy="40" r="6" fill="currentColor" />
-                    <path d="M50 46 C44 49 40 54 40 60 L60 60 C60 54 56 49 50 46 Z" fill="currentColor" />
-                    <path d="M35 60 C35 55 40 55 43 57 M65 60 C65 55 60 55 57 57" strokeLinecap="round" />
-                  </svg>
-                </div>
+                <img src="/prog_icon_1.png" alt="Life Coaching" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Life Coaching<br />& Guidance
                 </h3>
@@ -419,14 +412,7 @@ function App() {
 
               {/* Card 2 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
-                  <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="currentColor">
-                    <polygon points="50,25 62,55 50,75 38,55" fill="currentColor" opacity="0.3" stroke="currentColor" strokeWidth="1.5" />
-                    <polygon points="40,35 50,60 40,75 30,60" fill="currentColor" opacity="0.25" stroke="currentColor" strokeWidth="1.5" />
-                    <polygon points="60,35 70,60 60,75 50,60" fill="currentColor" opacity="0.25" stroke="currentColor" strokeWidth="1.5" />
-                    <path d="M28,25 L32,25 M30,23 L30,27 M68,25 L72,25 M70,23 L70,27" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
-                </div>
+                <img src="/prog_icon_2.png" alt="Crystal Guidance" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Crystal Guidance<br />& Energy Healing
                 </h3>
@@ -442,14 +428,7 @@ function App() {
 
               {/* Card 3 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
-                  <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="50" cy="50" r="28" strokeDasharray="3,3" opacity="0.5" />
-                    <circle cx="50" cy="50" r="20" strokeDasharray="2,2" opacity="0.7" />
-                    <circle cx="50" cy="40" r="5" fill="currentColor" opacity="0.8" />
-                    <path d="M50 45 C44 48 42 53 42 62 L58 62 C58 53 56 48 50 45 Z" fill="currentColor" opacity="0.8" />
-                  </svg>
-                </div>
+                <img src="/prog_icon_3.png" alt="Aura Reading" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Aura Reading<br />& Analysis
                 </h3>
@@ -465,22 +444,7 @@ function App() {
 
               {/* Card 4 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
-                  <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="none" stroke="currentColor" strokeWidth="1">
-                    <circle cx="50" cy="50" r="25" strokeWidth="1.5" />
-                    <line x1="25" y1="50" x2="75" y2="50" />
-                    <line x1="50" y1="25" x2="50" y2="75" />
-                    <text x="36" y="42" fontSize="10" fontFamily="serif" fontWeight="bold" fill="currentColor" textAnchor="middle">3</text>
-                    <text x="50" y="42" fontSize="10" fontFamily="serif" fontWeight="bold" fill="currentColor" textAnchor="middle">1</text>
-                    <text x="64" y="42" fontSize="10" fontFamily="serif" fontWeight="bold" fill="currentColor" textAnchor="middle">8</text>
-                    <text x="36" y="54" fontSize="10" fontFamily="serif" fontWeight="bold" fill="currentColor" textAnchor="middle">7</text>
-                    <text x="50" y="54" fontSize="10" fontFamily="serif" fontWeight="bold" fill="currentColor" textAnchor="middle">5</text>
-                    <text x="64" y="54" fontSize="10" fontFamily="serif" fontWeight="bold" fill="currentColor" textAnchor="middle">2</text>
-                    <text x="36" y="66" fontSize="10" fontFamily="serif" fontWeight="bold" fill="currentColor" textAnchor="middle">9</text>
-                    <text x="50" y="66" fontSize="10" fontFamily="serif" fontWeight="bold" fill="currentColor" textAnchor="middle">6</text>
-                    <text x="64" y="66" fontSize="10" fontFamily="serif" fontWeight="bold" fill="currentColor" textAnchor="middle">4</text>
-                  </svg>
-                </div>
+                <img src="/prog_icon_4.png" alt="Astro Numerology" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Astro Numerology<br />Consultation
                 </h3>
@@ -501,14 +465,7 @@ function App() {
               
               {/* Card 5 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
-                  <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="50" cy="50" r="26" />
-                    <polygon points="50,28 55,50 50,72 45,50" fill="currentColor" opacity="0.3" />
-                    <line x1="50" y1="28" x2="50" y2="72" strokeWidth="2" />
-                    <line x1="28" y1="50" x2="72" y2="50" />
-                  </svg>
-                </div>
+                <img src="/prog_icon_5.png" alt="Vaastu Consultation" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Vaastu Consultation<br />& Corrections
                 </h3>
@@ -524,14 +481,7 @@ function App() {
 
               {/* Card 6 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
-                  <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M50 20 C42 38 25 48 32 62 C38 62 45 48 50 30 C55 48 62 62 68 62 C75 48 58 38 50 20 Z" fill="currentColor" opacity="0.4" />
-                    <path d="M50 30 C46 42 38 48 42 56 C46 56 48 50 50 38 C52 50 54 56 58 56 C62 48 54 42 50 30 Z" fill="currentColor" opacity="0.3" />
-                    <circle cx="50" cy="53" r="3" fill="currentColor" />
-                    <path d="M30 70 Q50 78 70 70 M38 76 Q50 82 62 76" strokeLinecap="round" />
-                  </svg>
-                </div>
+                <img src="/prog_icon_6.png" alt="Meditations" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Meditations
                 </h3>
@@ -547,13 +497,7 @@ function App() {
 
               {/* Card 7 */}
               <div className="group bg-white/65 hover:bg-[#123A1A] border border-[#ebdcc5] hover:border-[#C4A15A]/35 rounded-2xl p-6 flex flex-col items-center text-center shadow-[0_4px_12px_-4px_rgba(212,153,66,0.08)] hover:shadow-[0_12px_32px_-8px_rgba(18,58,26,0.38)] transition-all duration-500 max-w-[305px] w-full mx-auto">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-b from-[#FFFDF8] to-[#F5EAD4] border border-[#E0D0B5] flex items-center justify-center mb-3.5 shadow-inner transition-all duration-500 group-hover:from-[#1A3A28] group-hover:to-[#123A1A] group-hover:border-[#C4A15A]/40 text-[#B88A2E] group-hover:text-[#C4A15A]">
-                  <svg viewBox="0 0 100 100" className="h-10 w-10 transition-colors duration-500" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M50 30 A8 8 0 0 0 50 46 A8 8 0 0 0 50 30 Z" fill="currentColor" opacity="0.35" />
-                    <path d="M50 48 C42 52 38 58 38 68 L62 68 C62 58 58 52 50 48 Z" fill="currentColor" opacity="0.35" />
-                    <path d="M50 20 L50 25 M50 75 L50 80 M20 50 L25 50 M75 50 L80 50 M29 29 L33 33 M71 71 L75 75 M29 71 L33 67 M71 29 L75 33" strokeLinecap="round" strokeWidth="2" />
-                  </svg>
-                </div>
+                <img src="/prog_icon_7.png" alt="Aura Reset" className="h-20 w-20 rounded-full object-cover mb-3.5 shadow-md group-hover:scale-105 transition-transform duration-300" />
                 <h3 className="engrave-green group-hover:[background-image:linear-gradient(to_right,#C4A15A,#C4A15A)] text-[22px] md:text-[24px] font-semibold mb-2 leading-snug transition-all duration-300" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                   Aura Reset<br />Self-Healing Workshops
                 </h3>
